@@ -44,6 +44,7 @@ public class FileTest {
 
         list.sort((Apple a1,Apple a2)->Float.compare(a1.getWeight(),a2.getWeight()));
         List<String> s0=list.stream().map(Apple::getColor).collect(toList());
+        s0.stream().forEach(System.out::println);
         String s=JSON.toJSONString(s0);
         System.out.println(s);
 
