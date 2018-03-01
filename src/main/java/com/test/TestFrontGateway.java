@@ -167,10 +167,10 @@ public class TestFrontGateway {
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
         sParaTemp.put(ParamsKeyConstant.CARD_TYPE,"24");
         //  20150100065066
-        sParaTemp.put(ParamsKeyConstant.CARD_NO,"20150100156141");
+        sParaTemp.put(ParamsKeyConstant.CARD_NO,"20150100121012");
         sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QueryPatientInfo);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
-        String result = HttpClientUtils.post(url,sPara);
+        String result = HttpClientUtils.post(prodUrl,sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
@@ -225,7 +225,7 @@ public class TestFrontGateway {
         sParaTemp.put(ParamsKeyConstant.DEPT_CODE,"021001");
         sParaTemp.put(ParamsKeyConstant.HOSP_CODE, String.valueOf("1000011272"));
         sParaTemp.put("startDate","2018-01-23");
-        sParaTemp.put("endDate","2018-02-01");
+        sParaTemp.put("endDate","2018-02-27");
         sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QueryRegistrationScheduleInfoList);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
         String result = HttpClientUtils.post(url,sPara);
