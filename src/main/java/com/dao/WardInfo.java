@@ -7,10 +7,12 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.List;
 
+
 @Data
 public class WardInfo implements Serializable{
 
     private static final long serialVersionUID = 1L;
+    private Long ID;
     private String wardNo;//病房编号
     private String areaNo;//病区编号
     private String areaName;//病区名称

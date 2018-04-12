@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.yuantu:yuantu-util:1.0.1-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.m2/repository/com/yuantu/yuantu-util/1.0.1-SNAPSHOT/yuantu-util-1.0.1-20170504.110654-21.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/yuantu/yuantu-util/1.0.1-SNAPSHOT/yuantu-util-1.0.1-20170504.110654-21.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.m2/repository/com/yuantu/yuantu-util/1.0.1-SNAPSHOT/yuantu-util-1.0.1-20170504.110654-21-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/yuantu/yuantu-util/1.0.1-SNAPSHOT/yuantu-util-1.0.1-20170504.110654-21-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.m2/repository/com/yuantu/yuantu-util/1.0.1-SNAPSHOT/yuantu-util-1.0.1-20170504.110654-21-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/yuantu/yuantu-util/1.0.1-SNAPSHOT/yuantu-util-1.0.1-20170504.110654-21-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

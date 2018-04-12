@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.yuantu:frontgateway-client:1.0.0-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.m2/repository/com/yuantu/frontgateway-client/1.0.0-SNAPSHOT/frontgateway-client-1.0.0-20170805.071302-77.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/yuantu/frontgateway-client/1.0.0-SNAPSHOT/frontgateway-client-1.0.0-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.m2/repository/com/yuantu/frontgateway-client/1.0.0-SNAPSHOT/frontgateway-client-1.0.0-20170805.071302-77-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/yuantu/frontgateway-client/1.0.0-SNAPSHOT/frontgateway-client-1.0.0-SNAPSHOT-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.m2/repository/com/yuantu/frontgateway-client/1.0.0-SNAPSHOT/frontgateway-client-1.0.0-20170805.071302-77-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/yuantu/frontgateway-client/1.0.0-SNAPSHOT/frontgateway-client-1.0.0-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
