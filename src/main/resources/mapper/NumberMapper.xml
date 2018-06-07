@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.NumberMapper">
+  <resultMap id="BaseResultMap" type="com.bean.Number">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="orderno" jdbcType="INTEGER" property="orderno" />
+    <result column="queuedate" jdbcType="DATE" property="queuedate" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="modifytime" jdbcType="TIMESTAMP" property="modifytime" />
+    <result column="calltime" jdbcType="INTEGER" property="calltime" />
+    <result column="windowno" jdbcType="INTEGER" property="windowno" />
+  </resultMap>
+</mapper>

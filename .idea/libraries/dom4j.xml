@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="dom4j">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../maven_repo2/dom4j/dom4j/1.6.1" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../maven_repo2/dom4j/dom4j/1.6.1" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../maven_repo2/dom4j/dom4j/1.6.1" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../maven_repo2/dom4j/dom4j/1.6.1" recursive="false" type="SOURCES" />
+  </library>
+</component>

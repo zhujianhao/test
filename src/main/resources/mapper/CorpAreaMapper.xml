@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.CorpAreaMapper">
+  <resultMap id="BaseResultMap" type="com.bean.CorpArea">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="corp_id" jdbcType="VARCHAR" property="corpId" />
+    <result column="corp_name" jdbcType="VARCHAR" property="corpName" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modify" jdbcType="TIMESTAMP" property="gmtModify" />
+    <result column="area_name" jdbcType="VARCHAR" property="areaName" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="service_mode" jdbcType="TINYINT" property="serviceMode" />
+    <result column="whether_confirm" jdbcType="TINYINT" property="whetherConfirm" />
+    <result column="create_num_source" jdbcType="TINYINT" property="createNumSource" />
+    <result column="use_diag_room_scheduling" jdbcType="TINYINT" property="useDiagRoomScheduling" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="detail" jdbcType="VARCHAR" property="detail" />
+    <result column="corp_area_type" jdbcType="TINYINT" property="corpAreaType" />
+    <result column="media" jdbcType="VARCHAR" property="media" />
+    <result column="is_nurse_call" jdbcType="INTEGER" property="isNurseCall" />
+    <result column="is_table_call" jdbcType="INTEGER" property="isTableCall" />
+  </resultMap>
+</mapper>
