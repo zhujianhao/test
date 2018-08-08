@@ -32,10 +32,10 @@ import java.util.Map;
 //测试的cardNo : 0101103  cardType：2 deptCode:021607 patientId 7 hospitalCode:1000011272
 public class TestFrontGateway {
 
-    private String prodUrl="http://192.168.90.64:8980/frontgateway/gateway.do";
+    private String prodUrl="http://192.168.90.74:8980/frontgateway/gateway.do";
     //private String localUrl="http://192.168.90.65:8088/frontgateway/gateway.do";
-    private String url="http://192.168.90.65:8088/frontgateway/gateway.do";
-    private String localUrl="http://127.0.0.1:8080/frontgateway/gateway.do";
+    private String url="http://192.168.90.75:8090/frontgateway/gateway.do";
+    private String localUrl="http://127.0.0.1:8081/frontgateway/gateway.do";
 
     private String yuantutestUrl="http://121.40.253.119:8190/frontgateway/gateway.do";
 
@@ -45,14 +45,14 @@ public class TestFrontGateway {
         Map<String,String> params = new HashMap();
 
         params.put("idType","1");
-        params.put("operId","ZZ01");
+        params.put("operId","Z001");
         params.put("birthday", "1992-04-17");
         params.put("phone","13588888887");
         params.put("sex","女");
         params.put("sourceCode","ZZJ");
         params.put("deviceMac","00-FF-CE-BD-49-1D");
-        params.put(ParamsKeyConstant.CARD_TYPE,"2");
-        params.put("cardNo", "0101187");
+        params.put(ParamsKeyConstant.CARD_TYPE,"24");
+        params.put("cardNo", "1234567806");
         params.put("deviceIp","192.168.2.11");
         params.put("name", "测试账号20");
         params.put("tradeMode", "OC");
@@ -64,32 +64,13 @@ public class TestFrontGateway {
         params.put("accountNo", "");
         params.put("deviceInfo", "001");
         params.put("nation","汉");
-
         params.put("pwd", "123");
         params.put("address", "中国北京");
         params.put("service", "yuantu.wap.set.patient.info");
         params.put("patientType", "自费");
         params.put("flowId", "261ZZJ012017061612111050");
         params.put(ParamsKeyConstant.GUARDIAN_NAME,"ss");
-//        params.put("patientType", "自费");
-//        params.put("cardNo", "370283790911703");
-//        params.put("patientName", "建档4");
-//        params.put("sex", "男");
-//        params.put("birthday", "2015-10-30");
-//        params.put(ParamsKeyConstant.ID_NO, "370181198810271712");
-//        params.put("nation", "汉");
-//        params.put("idType", "1");
-//        params.put("address", "山东千佛山");
-//        params.put("phone", "13168146182");
-//        params.put("flowId", "13333111133");
-//        params.put("cash", "1");
-//        params.put("tradeMode", "DB");
-//        params.put("pwd", "123456");
 
-//        params.put("bankNo", "34455");
-//        params.put("accountNo", "33333333122");
-//        params.put("hospCode", "3702010323");
-//        params.put("terminalNo","ZZJ002");
 
         params.put(ParamsKeyConstant.HOSPITAL_ID,"2001");
         params.put(ParamsKeyConstant.SERVICE, HttpServiceName.SetPatientInfo);
@@ -104,15 +85,14 @@ public class TestFrontGateway {
    @Test
     public void testQueryDeptList() throws IOException {
        Map<String, String> sParaTemp = new HashMap();
-       sParaTemp.put(ParamsKeyConstant.REG_MODE,"1");
+       sParaTemp.put(ParamsKeyConstant.REG_MODE,"2");
        sParaTemp.put(ParamsKeyConstant.REG_TYPE,"1");
-       sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
+       sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZJJ");
        sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
-       sParaTemp.put(ParamsKeyConstant.OPER_ID,"ZZ01");
-       sParaTemp.put(ParamsKeyConstant.HOSP_CODE, String.valueOf(""));
-       sParaTemp.put(ParamsKeyConstant.HIS_CODE, String.valueOf(""));
-       sParaTemp.put("startDate","2018-05-28");
-       sParaTemp.put("endDate","2018-05-30");
+       sParaTemp.put(ParamsKeyConstant.OPER_ID,"Z001");
+
+       sParaTemp.put("startDate","2018-07-19");
+       sParaTemp.put("endDate","2018-07-19");
        sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QueryRegistrationDepList);
        Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
        String result = HttpClientUtils.post(localUrl,sPara);
@@ -127,15 +107,15 @@ public class TestFrontGateway {
     public void testQueryRegistDept() throws IOException {
         Map<String, String> sParaTemp = new HashMap();
         sParaTemp.put(ParamsKeyConstant.REG_MODE,"1");
-        sParaTemp.put(ParamsKeyConstant.REG_TYPE,"1");
-        sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
+        sParaTemp.put(ParamsKeyConstant.REG_TYPE,"2");
+        sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "APP");
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
-        sParaTemp.put(ParamsKeyConstant.OPER_ID,"ZZ01");
+        sParaTemp.put(ParamsKeyConstant.OPER_ID,"Z001");
         sParaTemp.put(ParamsKeyConstant.HOSP_CODE, String.valueOf(""));
         sParaTemp.put(ParamsKeyConstant.HIS_CODE, String.valueOf(""));
-        sParaTemp.put(ParamsKeyConstant.DEPT_CODE,"020101");
-        sParaTemp.put(ParamsKeyConstant.START_DATE,"2018-05-31");
-        sParaTemp.put(ParamsKeyConstant.END_DATE,"2018-06-01");
+        sParaTemp.put(ParamsKeyConstant.DEPT_CODE,"020801");
+        sParaTemp.put(ParamsKeyConstant.START_DATE,"2018-07-18");
+        sParaTemp.put(ParamsKeyConstant.END_DATE,"2018-07-18");
         sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QueryRegistrationScheduleInfoList);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
         String result = HttpClientUtils.post(localUrl,sPara);
@@ -166,9 +146,10 @@ public class TestFrontGateway {
         Map<String, String> sParaTemp = new HashMap();
         sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
+        sParaTemp.put(ParamsKeyConstant.DOCT_CODE,"0150");
         sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QUERYHOSPITALALLDOC);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
-        String result = HttpClientUtils.post(localUrl,sPara);
+        String result = HttpClientUtils.post(url,sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
@@ -183,13 +164,13 @@ public class TestFrontGateway {
         sParaTemp.put(ParamsKeyConstant.PATIENT_ID,"156");
         sParaTemp.put(ParamsKeyConstant.PATIENT_NAME,"测试账号20");
         sParaTemp.put(ParamsKeyConstant.DEPT_CODE,"020101");
-        sParaTemp.put(ParamsKeyConstant.CARD_TYPE,"2");
-        sParaTemp.put(ParamsKeyConstant.CARD_NO,"0101186");
+        sParaTemp.put(ParamsKeyConstant.CARD_TYPE,"24");
+        sParaTemp.put(ParamsKeyConstant.CARD_NO,"20150100113408");
         sParaTemp.put(ParamsKeyConstant.REG_TYPE,"1");
-        sParaTemp.put(ParamsKeyConstant.SCHEDULE_ID,"45");
+        sParaTemp.put(ParamsKeyConstant.SCHEDULE_ID,"69");
         sParaTemp.put(ParamsKeyConstant.SERVICE, "yuantu.wap.reg.pre.process");
-        sParaTemp.put(ParamsKeyConstant.OPER_ID,"ZZ01");
-        sParaTemp.put(ParamsKeyConstant.APPO_NO,"34");
+        sParaTemp.put(ParamsKeyConstant.OPER_ID,"Z001");
+//        sParaTemp.put(ParamsKeyConstant.APPO_NO,"34");
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
         String result = HttpClientUtils.post(localUrl,sPara);
         JSONObject array= JSON.parseObject(result);
@@ -208,9 +189,10 @@ public class TestFrontGateway {
         sParaTemp.put(ParamsKeyConstant.HOSP_CODE, String.valueOf(""));
         sParaTemp.put(ParamsKeyConstant.HIS_CODE, String.valueOf(""));
         //sParaTemp.put(ParamsKeyConstant.DEPT_CODE,"020101");
+        sParaTemp.put(ParamsKeyConstant.DEPT_TYPE,"1");
         sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QueryHospitalDep);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
-        String result = HttpClientUtils.post(localUrl,sPara);
+        String result = HttpClientUtils.post(url,sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
@@ -222,12 +204,13 @@ public class TestFrontGateway {
         Map<String, String> sParaTemp = new HashMap();
         sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
+        sParaTemp.put(ParamsKeyConstant.OPER_ID,"Z001");
         sParaTemp.put(ParamsKeyConstant.CARD_TYPE,"24");
         //  20150100065066
-        sParaTemp.put(ParamsKeyConstant.CARD_NO,"20150100019595");
+        sParaTemp.put(ParamsKeyConstant.CARD_NO,"20150100142175");
         sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QueryPatientInfo);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
-        String result = HttpClientUtils.post(prodUrl,sPara);
+        String result = HttpClientUtils.post(url,sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
@@ -276,14 +259,18 @@ public class TestFrontGateway {
     @Test
     public void testPlan() throws IOException {
         Map<String, String> sParaTemp = new HashMap();
-        sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "APP");
+        sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZJJ");
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
-        sParaTemp.put(ParamsKeyConstant.REG_MODE,"1");
-        sParaTemp.put(ParamsKeyConstant.DEPT_CODE,"020417");
+        sParaTemp.put(ParamsKeyConstant.REG_MODE,"2");
+        sParaTemp.put(ParamsKeyConstant.REG_TYPE,"1");
+        sParaTemp.put(ParamsKeyConstant.START_DATE,"2018-07-19");
+        sParaTemp.put(ParamsKeyConstant.END_DATE,"2018-07-19");
+//        sParaTemp.put(ParamsKeyConstant.DEPT_CODE,"020801");
+//        sParaTemp.put(ParamsKeyConstant.DOCT_CODE,"1127");
         sParaTemp.put(ParamsKeyConstant.HOSP_CODE, String.valueOf("1000011274"));
         sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QueryRegistrationScheduleInfoList);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
-        String result = HttpClientUtils.post(prodUrl,sPara);
+        String result = HttpClientUtils.post(localUrl,sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
@@ -440,7 +427,7 @@ public class TestFrontGateway {
         sParaTemp.put(ParamsKeyConstant.OPER_ID,"Z001");
         sParaTemp.put(ParamsKeyConstant.HOSP_CODE,"1000011272");
         sParaTemp.put(ParamsKeyConstant.PATIENT_ID,"20180602003");
-        sParaTemp.put(ParamsKeyConstant.BILL_NO,"20180604Z0010004");
+        sParaTemp.put(ParamsKeyConstant.RECEIPT_NO,"20180628Z0010003");
 //        sParaTemp.put(ParamsKeyConstant.BILL_TYPE,"");
         sParaTemp.put(ParamsKeyConstant.TRADE_MODE,"ZFB");
         sParaTemp.put(ParamsKeyConstant.BILL_ITEM,"");
@@ -449,7 +436,7 @@ public class TestFrontGateway {
         sParaTemp.put(ParamsKeyConstant.FLOW_ID,"10000000000010");
         sParaTemp.put(ParamsKeyConstant.SERVICE, "yuantu.wap.unlock.balance.bill");
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
-        String result = HttpClientUtils.post(localUrl,sPara);
+        String result = HttpClientUtils.post(url,sPara);
         JSONObject array= JSON.parseObject(result);
 
         System.out.print(result);
@@ -511,10 +498,25 @@ public class TestFrontGateway {
     public void testWard() throws IOException {
         Map<String, String> sParaTemp = new HashMap();
         sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
-        sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "9999");
+        sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
+        sParaTemp.put(ParamsKeyConstant.AREA_CODE,"030101");
         sParaTemp.put(ParamsKeyConstant.SERVICE,HttpServiceName.QueryInhosWardInfo);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
-        String result = HttpClientUtils.post(yuantutestUrl,sPara);
+        String result = HttpClientUtils.post(localUrl,sPara);
+        JSONObject array= JSON.parseObject(result);
+        System.out.print(result);
+    }
+
+    @Test
+    public void testWardItem() throws IOException {
+        Map<String, String> sParaTemp = new HashMap();
+        sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
+        sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
+        sParaTemp.put(ParamsKeyConstant.AREA_CODE,"030107");
+        sParaTemp.put(ParamsKeyConstant.WARD_NO,"701");
+        sParaTemp.put(ParamsKeyConstant.SERVICE,HttpServiceName.QueryInhosWardInfoItem);
+        Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
+        String result = HttpClientUtils.post(localUrl,sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
@@ -526,7 +528,7 @@ public class TestFrontGateway {
         Map<String, String> sParaTemp = new HashMap();
         sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
-        sParaTemp.put(ParamsKeyConstant.REG_MODE,"2");
+        sParaTemp.put(ParamsKeyConstant.REG_MODE,"1");
 //        sParaTemp.put(ParamsKeyConstant.SCHEDULE_ID,"1");
         sParaTemp.put("startDate","2017-04-17");
         sParaTemp.put("endDate","2018-04-19");
@@ -627,16 +629,17 @@ public class TestFrontGateway {
         sParaTemp.put(ParamsKeyConstant.DEVICE_IP,"192.168.2.11");
         sParaTemp.put(ParamsKeyConstant.TRADE_TIME,"2018-03-18 10:10:00");
         sParaTemp.put(ParamsKeyConstant.HOSP_CODE, String.valueOf("1000011274"));
-        sParaTemp.put(ParamsKeyConstant.FLOW_ID,"1111111111111114");
+        sParaTemp.put(ParamsKeyConstant.FLOW_ID,"1111111111111116");
 
 
-        sParaTemp.put(ParamsKeyConstant.OUT_TRADE_NO,"01020010120180530094658103526460");
-        sParaTemp.put("outRefundNo","01020010120180601094658103526460");
-        sParaTemp.put("fee","210");
-        sParaTemp.put("reason","何天予缴费人工退费");
+        sParaTemp.put(ParamsKeyConstant.OUT_TRADE_NO,"01020010120180806143918788570071");
+        sParaTemp.put("outRefundNo","T00000000000000111130");
+        sParaTemp.put("fee","17.5");
+        sParaTemp.put("reason","高戈部分退费17.5元");
 
         sParaTemp.put(ParamsKeyConstant.SERVICE,HttpServiceName.BackFeeUserCash);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
+        System.out.println(JSON.toJSONString(sPara));
         String result = HttpClientUtils.post(prodUrl,sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
@@ -657,39 +660,16 @@ public class TestFrontGateway {
     }
 
     @Test
-    public void test() throws DocumentException {
-        String s ="<zzxt>\n" +
-                "<result>\n" +
-                "<retcode>0</retcode>\n" +
-                "<retmsg>交易成功</retmsg>\n" +
-                "</result>\n" +
-                "<table>\n" +
-                "<brzt>T</brzt>\n" +
-                "<patid>25854</patid>\n" +
-                "<cardno>8115</cardno>\n" +
-                "<cardtype>1</cardtype>\n" +
-                "<pzlx>0</pzlx>\n" +
-                "<hzxm>8115测试</hzxm>\n" +
-                "<ybdm>1</ybdm>\n" +
-                "<sex>男</sex>\n" +
-                "<sfzh>320381198405235779</sfzh>\n" +
-                "<lxdz></lxdz>\n" +
-                "<ghbz>1</ghbz>\n" +
-                "<lxdh>1234509876133</lxdh>\n" +
-                "<zhye>1469.24</zhye>\n" +
-                "<ispwd></ispwd>\n" +
-                "<djrq>20120625151004</djrq>\n" +
-                "<lrrq>20120303</lrrq>\n" +
-                "<gsbz>0</gsbz>\n" +
-                "<birth>19860303 </birth>\n" +
-                "<blh>20160601000001</blh>\n" +
-                "</table>\n" +
-                "</zzxt>";
-
-        Document document = DocumentHelper.parseText(s);
-        Map map = XmlUtils.dom2Map(document.getRootElement());
-        JSONObject jsonObject = (JSONObject) JSON.toJSON(map);
-        System.out.print(jsonObject.toJSONString());
+    public void test() throws IOException {
+        String s ="{\"deviceIp\":\"10.8.10.147\",\"deptName\":\"\",\"patientId\":\"227\",\"posTransNo\":\"\",\"sign\":\"beVLB2sqVp1kLQnvERf/gzwKu/OEqgi6C8m2JQcZVFXlsRnyuQj/JLM9P9SpfOeb0QLsyjHmq+rf4u66lUfg5/bxMyVMukM8AkaCjFW1rHAU4autWzBVbFce78HIbZpMlhb26RSQKGdeMlcmvz3IBZregYfndRQyRMWr17vrJSE=\",\"cardNo\":\"000006322021\",\"idNo\":\"\",\"sourceCode\":\"ZZJ\",\"regFlowId\":\"20180702Z0010005\",\"medDate\":\"\",\"deviceMac\":\"00-0E-C4-D3-99-06\",\"bankTime\":\"\",\"cash\":\"5000\",\"sign_type\":\"RSA\",\"scheduleId\":\"130\",\"terminalNo\":\"Z001\",\"bankDate\":\"\",\"payAccountNo\":\"\",\"bankCardNo\":\"\",\"doctName\":\"\",\"bankTransNo\":\"\",\"guarderId\":\"\",\"appoNo\":\"429\",\"deviceInfo\":\"Z001\",\"extend\":\"{\\\"version\\\":\\\"1\\\",\\\"isPayNow\\\":\\\"0\\\",\\\"regTypeYT\\\":\\\"1\\\",\\\"GetPersonInfo\\\":\\\"<?xml version=\\\\\\\"1.0\\\\\\\" encoding=\\\\\\\"UTF-16\\\\\\\" standalone=\\\\\\\"yes\\\\\\\"?>\\\\r\\\\n<root version=\\\\\\\"1.00.0408\\\\\\\"><state success=\\\\\\\"true\\\\\\\"></state><output><ic><card_no>000006322021</card_no><ic_no>00000632202S</ic_no><id_no>999999198102163121</id_no><personname>测试6322B</personname><sex>2</sex><birthday>19810216</birthday><fromhosp></fromhosp><fromhospdate>18991230</fromhospdate><fundtype>3</fundtype><isyt>0</isyt><jclevel>0</jclevel><hospflag>0</hospflag></ic><net><persontype>11</persontype><isinredlist>true</isinredlist><isspecifiedhosp>1</isspecifiedhosp><ischronichosp>false</ischronichosp><personcount>200.00</personcount><chroniccode></chroniccode></net></output></root>\\\\r\\\\n\\\",\\\"Divide\\\":\\\"<?xml version=\\\\\\\"1.0\\\\\\\" encoding=\\\\\\\"UTF-16\\\\\\\" standalone=\\\\\\\"yes\\\\\\\"?>\\\\r\\\\n<root version=\\\\\\\"1.00.0408\\\\\\\"><state success=\\\\\\\"true\\\\\\\"></state><output><tradeinfo><tradeno>999000030C180702000001</tradeno><feeno>00120180702000058</feeno><tradedate>20180702171444</tradedate></tradeinfo><feeitemarray><feeitem itemno=\\\\\\\"429\\\\\\\" recipeno=\\\\\\\"429\\\\\\\" hiscode=\\\\\\\"OT00114\\\\\\\" itemcode=\\\\\\\"W0101020010\\\\\\\" itemname=\\\\\\\"医事服务费【三级医院】【普通门诊】\\\\\\\" itemtype=\\\\\\\"2\\\\\\\" unitprice=\\\\\\\"50.0000\\\\\\\" count=\\\\\\\"1\\\\\\\" fee=\\\\\\\"50.0000\\\\\\\" feein=\\\\\\\"40.0000\\\\\\\" feeout=\\\\\\\"10.0000\\\\\\\" selfpay2=\\\\\\\"10.0000\\\\\\\" state=\\\\\\\"0\\\\\\\" fee_type=\\\\\\\"0601\\\\\\\" preferentialfee=\\\\\\\"0.0000\\\\\\\" preferentialscale=\\\\\\\"0\\\\\\\"></feeitem></feeitemarray><sumpay><feeall>50.00</feeall><fund>40.00</fund><cash>0.00</cash><personcountpay>10.00</personcountpay></sumpay><payinfo><mzfee>50.00</mzfee><mzfeein>40.00</mzfeein><mzfeeout>10.00</mzfeeout><mzpayfirst>0.00</mzpayfirst><mzselfpay2>10.00</mzselfpay2><mzbigpay>40.00</mzbigpay><mzbigselfpay>0.00</mzbigselfpay><mzoutofbig>0.00</mzoutofbig><bcpay>0.00</bcpay><jcbz>0.00</jcbz></payinfo><medicatalog><medicine>0.00</medicine><tmedicine>0.00</tmedicine><therb>0.00</therb><examine>0.00</examine><ct>0.00</ct><mri>0.00</mri><ultrasonic>0.00</ultrasonic><oxygen>0.00</oxygen><operation>0.00</operation><treatment>0.00</treatment><xray>0.00</xray><labexam>0.00</labexam><bloodt>0.00</bloodt><orthodontics>0.00</orthodontics><prosthesis>0.00</prosthesis><forensic_expertise>0.00</forensic_expertise><material>0.00</material><other>50.00</other></medicatalog><medicatalog2><diagnosis>50.00</diagnosis><examine>0.00</examine><labexam>0.00</labexam><treatment>0.00</treatment><operation>0.00</operation><material>0.00</material><medicine>0.00</medicine><therb>0.00</therb><tmedicine>0.00</tmedicine><medicalservice>0.00</medicalservice><commonservice>0.00</commonservice><registfee>0.00</registfee><otheropfee>0.00</otheropfee></medicatalog2></output></root>\\\\r\\\\n\\\",\\\"Trade\\\":\\\"<?xml version=\\\\\\\"1.0\\\\\\\" encoding=\\\\\\\"UTF-16\\\\\\\" standalone=\\\\\\\"yes\\\\\\\"?>\\\\r\\\\n<root version=\\\\\\\"1.00.0408\\\\\\\"><state success=\\\\\\\"true\\\\\\\"></state><output><personcountaftersub>190.00</personcountaftersub><certid>000000000243f6db</certid><sign>G5QvJLdEhUHo4l+DSoOCpvUScS7HSaKOXmyr25YSioabItbstIqsl3M4I/dTBh4s4dD2zmFr0seCe8vhx+O5uETdsgcaBceqqboAgn1iYn1i/76ESnHn0q59xnHuCcpZUqwHesBVlhwqiacc8cuaoBIX8A8NSEKy5qpo2Go7K1I=</sign></output></root>\\\\r\\\\n\\\"}\",\"medTime\":\"\",\"bankSettlementTime\":\"\",\"lockId\":\"\",\"tradeTime\":\"2018-07-02 17:14:49\",\"medAmPm\":\"0\",\"phone\":\"\",\"clinicres\":\"\",\"deptCode\":\"020417\",\"posIndexNo\":\"\",\"operId\":\"Z001\",\"sellerAccountNo\":\"\",\"hospitalId\":\"2001\",\"ybInfo\":\"\",\"accountNo\":\"227\",\"outTradeNo\":\"\",\"flowId\":\"Z0012018070201689000059\",\"regType\":\"w0101020010\",\"tradeModeList\":\"[{\\\"tradeMode\\\":\\\"MIC\\\",\\\"accountNo\\\":\\\"227\\\",\\\"cash\\\":\\\"4000.00\\\",\\\"posTransNo\\\":\\\"00120180702000058\\\",\\\"bankTransNo\\\":null,\\\"bankDate\\\":null,\\\"bankTime\\\":null,\\\"bankSettlementTime\\\":null,\\\"bankCardNo\\\":null,\\\"posIndexNo\\\":\\\"Z001\\\",\\\"sellerAccountNo\\\":null,\\\"transNo\\\":\\\"999000030C180702000001\\\",\\\"payAccountNo\\\":\\\"00000632202S\\\",\\\"outTradeNo\\\":null,\\\"extend\\\":null},{\\\"tradeMode\\\":\\\"MIC\\\",\\\"accountNo\\\":\\\"227\\\",\\\"cash\\\":\\\"1000.00\\\",\\\"posTransNo\\\":\\\"00120180702000058\\\",\\\"bankTransNo\\\":null,\\\"bankDate\\\":null,\\\"bankTime\\\":null,\\\"bankSettlementTime\\\":null,\\\"bankCardNo\\\":null,\\\"posIndexNo\\\":\\\"Z001\\\",\\\"sellerAccountNo\\\":null,\\\"transNo\\\":\\\"999000030C180702000001\\\",\\\"payAccountNo\\\":\\\"00000632202S\\\",\\\"outTradeNo\\\":null,\\\"extend\\\":null},{\\\"tradeMode\\\":\\\"\\\",\\\"accountNo\\\":null,\\\"cash\\\":null,\\\"posTransNo\\\":null,\\\"bankTransNo\\\":null,\\\"bankDate\\\":null,\\\"bankTime\\\":null,\\\"bankSettlementTime\\\":null,\\\"bankCardNo\\\":null,\\\"posIndexNo\\\":null,\\\"sellerAccountNo\\\":null,\\\"transNo\\\":null,\\\"payAccountNo\\\":null,\\\"outTradeNo\\\":null,\\\"extend\\\":null}]\",\"patientName\":\"测试6322B\",\"hospCode\":\"\",\"cardType\":\"10\",\"deviceVersion\":\"YT-550\",\"transNo\":\"\",\"doctCode\":\"\",\"service\":\"yuantu.wap.appointment.or.registration\",\"regMode\":\"2\",\"tradeMode\":\"MIX\",\"invoice\":\"\",\"fundCustodian\":\"\"}";
+        Map map= JSON.parseObject(s,Map.class);
+//        Document document = DocumentHelper.parseText(s);
+//        Map map = XmlUtils.dom2Map(document.getRootElement());
+//        JSONObject jsonObject = (JSONObject) JSON.toJSON(map);
+        Map<String, String> sPara = ParamsUtil.buildRequestPara(map);
+        String result = HttpClientUtils.post(localUrl,sPara);
+        JSONObject array= JSON.parseObject(result);
+        System.out.print(result);
     }
 
     @Test
@@ -699,11 +679,11 @@ public class TestFrontGateway {
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
         sParaTemp.put(ParamsKeyConstant.REG_MODE,"2");
         sParaTemp.put(ParamsKeyConstant.HOSP_CODE, String.valueOf("1000011274"));
-        sParaTemp.put("startTime","2018-05-04 13:30:00");
-        sParaTemp.put("endTime","2018-05-04 14:00:00");
+        sParaTemp.put("startTime","2018-05-04 00:00:00");
+        sParaTemp.put("endTime","2018-06-24 00:00:00");
         sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QueryJhRegRecord);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
-        String result = HttpClientUtils.post(prodUrl,sPara);
+        String result = HttpClientUtils.post(localUrl,sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
@@ -714,15 +694,14 @@ public class TestFrontGateway {
         sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
         sParaTemp.put(ParamsKeyConstant.TYPE,"1");
-        sParaTemp.put(ParamsKeyConstant.CARD_TYPE,"24");
-        sParaTemp.put(ParamsKeyConstant.CARD_NO,"20150100114315");
-        sParaTemp.put("startDate","2018-02-25");
-        sParaTemp.put("endDate","2018-03-16");
-        sParaTemp.put(ParamsKeyConstant.PATIENT_ID,"1502202020");
+//        sParaTemp.put(ParamsKeyConstant.CARD_TYPE,"24");
+        sParaTemp.put(ParamsKeyConstant.PATIENT_ID,"111111551");
+        sParaTemp.put("startDate","2018-07-01");
+        sParaTemp.put("endDate","2018-08-12");
         sParaTemp.put(ParamsKeyConstant.HOSP_CODE, String.valueOf("1000011272"));
         sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QueryLisReport);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
-        String result = HttpClientUtils.post(prodUrl,sPara);
+        String result = HttpClientUtils.post(url,sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
@@ -731,7 +710,7 @@ public class TestFrontGateway {
         Map<String, String> sParaTemp = new HashMap();
         sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
-        sParaTemp.put(ParamsKeyConstant.PATIENT_ID,"1726839");
+        sParaTemp.put(ParamsKeyConstant.PATIENT_ID,"20234");
         sParaTemp.put(ParamsKeyConstant.CARD_TYPE,"-1");
         sParaTemp.put(ParamsKeyConstant.OPER_ID,"Z001");
         sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QueryInhosPatientInfo);
@@ -765,10 +744,10 @@ public class TestFrontGateway {
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
         sParaTemp.put(ParamsKeyConstant.PATIENT_ID,"1726839");
         sParaTemp.put(ParamsKeyConstant.OPER_ID,"Z001");
-        sParaTemp.put(ParamsKeyConstant.CASH,"100");
+        sParaTemp.put(ParamsKeyConstant.CASH,"10000");
         sParaTemp.put("syxh","16");
         sParaTemp.put("jsxh","16");
-        sParaTemp.put(ParamsKeyConstant.FLOW_ID,"ZZ0111111111111111");
+        sParaTemp.put(ParamsKeyConstant.FLOW_ID,"ZZ0111111111111112");
         sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.RechargeInhosVirtualSettlement);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
         String result = HttpClientUtils.post(localUrl,sPara);
@@ -777,9 +756,12 @@ public class TestFrontGateway {
     }
 
     @Test
-    public void tes(){
-        String s = JSON.toJSONString("{\"outMainPage\": [{ \"itemType\": 1, \"tittle\": \"住院须知\", \"style\": 0, \"imageUrl\": \"http://10.8.100.57:8084/file/picture/zhuyuanxuzhi.png\", \"tag\": \"hospitalIntro\", \"url\": \"http://inpatient.app/outAdmission\" },{ \"itemType\": 1, \"tittle\": \"家属订餐\", \"style\": 1, \"imageUrl\": \"http://10.8.100.57:8084/file/picture/jiashudingcan.png\", \"tag\": \"hospitalIntro\", \"url\": \"http://inpatient.app/orderWeb\" },{ \"itemType\": 1, \"tittle\": \"满意度调查\", \"style\": 3, \"imageUrl\": \"http://10.8.100.57:8084/file/picture/manyidudiaocha.png\", \"tag\": \"hospitalIntro\", \"url\": \"http://inpatient.app/outInvestagate\" } ], \"outAdmissionPage\": [ { \"itemType\": 2, \"tittle\": \"入院须知\", \"style\": 2, \"imageUrl\": \"https://front-images.oss-cn-hangzhou.aliyuncs.com/i4/74c9aec929f787aae7cb03ee8db3da28-238-198.png\", \"tag\": \"hospitalIntro\", \"url\": \"http://inpatient.app/outAdmissionDetail?sourceCode=1\" }, { \"itemType\": 2, \"tittle\": \"出院须知\", \"style\": 0, \"imageUrl\": \"https://front-images.oss-cn-hangzhou.aliyuncs.com/i4/6639d93c5090a81bb147d4baae5e4407-240-200.png\", \"tag\": \"hospitalIntro\", \"url\": \"http://inpatient.app/outAdmissionDetail?sourceCode=2\" }, { \"itemType\": 2, \"tittle\": \"患者须知\", \"style\": 4, \"imageUrl\": \"https://front-images.oss-cn-hangzhou.aliyuncs.com/i4/f970f678b0da6257b13b7863aaf5f49b-204-200.png\", \"tag\": \"hospitalIntro\", \"url\": \"http://inpatient.app/outAdmissionDetail?sourceCode=3\" }, { \"itemType\": 2, \"tittle\": \"医保须知\", \"style\": 3, \"imageUrl\": \"https://front-images.oss-cn-hangzhou.aliyuncs.com/i4/117125cf909a1d9b1a7b7060b48725a0-200-200.png\", \"tag\": \"hospitalIntro\", \"url\": \"http://inpatient.app/outAdmissionDetail?sourceCode=4\" }], \"outSettingPage\": [ { \"itemType\": 2, \"tittle\": \"输入编号\", \"style\": 0, \"imageUrl\": \"https://front-images.oss-cn-hangzhou.aliyuncs.com/i4/dca1fef5ba2e615a1d4cb7932a3188cc-182-200.png\", \"tag\": \"hospitalIntro\", \"url\": \"http: //inpatient.app/initBox\" }, { \"itemType\": 2, \"tittle\": \"网络\", \"style\": 4, \"imageUrl\": \"https://front-images.oss-cn-hangzhou.aliyuncs.com/i4/7641222786c4207f3f4e1ebf3d75fe80-270-200.png\", \"tag\": \"hospitalIntro\", \"url\": \"http: //inpatient.app/network\" }, { \"itemType\": 2, \"tittle\": \"升级\", \"style\": 2, \"imageUrl\": \"https://front-images.oss-cn-hangzhou.aliyuncs.com/i4/7ca2c497e255ee9745a7efb3e8e88edf-198-198.png\", \"tag\": \"hospitalIntro\", \"url\": \"http: //inpatient.app/update\" } ]}");
-        System.out.println(s);
+    public void tes() throws IOException {
+        String s = "{\"terminalNo\":\"Z003\",\"deviceIp\":\"10.8.70.3\",\"patientName\":\"\",\"hospCode\":\"\",\"searchType\":\"\",\"cardType\":\"24\",\"operId\":\"Z003\",\"secrityNo\":\"\",\"deviceVersion\":\"YT-550\",\"cardNo\":\"20150100170523\",\"deviceInfo\":\"Z003\",\"extend\":\"hisOnly\",\"tradeTime\":\"2018-07-19 11:04:44\",\"sourceCode\":\"ZZJ\",\"hospitalId\":\"2001\",\"service\":\"yuantu.wap.query.patient.info\",\"deviceMac\":\"00-0E-C4-D3-98-F2\",\"flowId\":\"Z0032018071962104000274\",\"fundCustodian\":\"\"}";
+        Map map  = JSON.parseObject(s,Map.class);
+        Map<String, String> sPara = ParamsUtil.buildRequestPara(map);
+        String result = HttpClientUtils.post(localUrl,sPara);
+        System.out.println(result);
     }
 
     @Test
@@ -802,7 +784,7 @@ public class TestFrontGateway {
         sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
         sParaTemp.put("pinyinCode","AM");
-        sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QueryMedicinesInfo);
+        sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.BingingPatientCard);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
         String result = HttpClientUtils.post(localUrl,sPara);
         JSONObject array= JSON.parseObject(result);
@@ -829,6 +811,18 @@ public class TestFrontGateway {
         System.out.print(result);
     }
 
+
+
+    @Test
+    public void regPreCharge() throws IOException {
+        String s = "{\"cardType\":\"24\",\"cardNo\":\"20150100113408\",\"regDate\":null,\"regType\":\"1\",\"medAmPm\":\"3\",\"deptCode\":\"020101\",\"doctCode\":null,\"appoNo\":null,\"patientId\":\"100\",\"scheduleId\":\"69\",\"service\":\"yuantu.wap.reg.pre.process\",\"hospitalId\":\"2001\",\"operId\":\"Z001\",\"tradeTime\":\"2018-06-19 09:46:08\",\"flowId\":\"Z0012018061901689000007\",\"hospCode\":\"\",\"sourceCode\":\"ZZJ\",\"deviceInfo\":\"Z001\",\"terminalNo\":\"Z001\",\"extend\":null,\"deviceMac\":\"00-0E-C4-D3-99-06\",\"deviceIp\":\"10.8.10.147\",\"deviceVersion\":\"YT-550\",\"fundCustodian\":\"\"}";
+        Map<String, String> sParaTemp = new HashMap();
+        sParaTemp = JSON.parseObject(s,Map.class);
+        Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
+        String result = HttpClientUtils.post(localUrl,sPara);
+        JSONObject array= JSON.parseObject(result);
+        System.out.print(result);
+    }
 
 
 
