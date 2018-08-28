@@ -29,7 +29,7 @@ public class Client {
                     }
                 });
         ChannelFuture future = bootstrap.connect("127.0.0.1", 8379).sync();
-        future.channel().writeAndFlush(Unpooled.copiedBuffer("777".getBytes()));
+        future.channel().writeAndFlush(Unpooled.copiedBuffer("777$_".getBytes()));
         future.channel().closeFuture().sync();
         workerGroup.shutdownGracefully();
     }
