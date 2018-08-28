@@ -13,6 +13,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.DelimiterBasedFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
+import io.netty.handler.logging.LoggingHandler;
 
 
 public class Server {
@@ -30,7 +31,9 @@ public class Server {
             ServerBootstrap bootstrap = new ServerBootstrap(); //辅助工具类，用于服务器通道的一系列配置
             bootstrap.group(bossGroup, workerGroup) //绑定两个线程组
                     .channel(NioServerSocketChannel.class) //指定NIO的模式
-                    .childHandler(new ChannelInitializer<SocketChannel>() { //配置具体的数据处理方式
+                    .handler(new LoggingHandler())//添加bossGroup的hangdler
+                    .childHandler(//添加workerGroup的handler
+                            new ChannelInitializer<SocketChannel>() { //配置具体的数据处理方式
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
                             ByteBuf buf = Unpooled.copiedBuffer("$_".getBytes());
@@ -38,7 +41,8 @@ public class Server {
                             socketChannel.pipeline().addLast(new StringDecoder());
                             socketChannel.pipeline().addLast(new ServerHandler());
                         }
-                    })
+                    }
+                    )
                     /**
                      * 对于ChannelOption.SO_BACKLOG的解释：
                      * 服务器端TCP内核维护有两个队列，我们称之为A、B队列。客户端向服务器端connect时，会发送带有SYN标志的包（第一次握手），服务器端
@@ -54,6 +58,7 @@ public class Server {
                     .option(ChannelOption.SO_RCVBUF, 32 * 1024) //设置接受数据缓冲大小
                     .childOption(ChannelOption.SO_KEEPALIVE, true); //保持连接
             ChannelFuture future = bootstrap.bind(port).sync();
+            // Wait until the server socket is closed.
             future.channel().closeFuture().sync();
         } catch (Exception e) {
             e.printStackTrace();

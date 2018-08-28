@@ -33,7 +33,6 @@ public class TestThreadExcutor {
             ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
             ScheduledFuture futureA = executorService.schedule(callableList.get(0), 4L, TimeUnit.SECONDS);
             ScheduledFuture futureB = executorService.schedule(callableList.get(1), 4L, TimeUnit.SECONDS);
-
             System.out.println("            X = " + System.currentTimeMillis());
             System.out.println("返回值A：" + futureA.get());
             System.out.println("返回值B：" + futureB.get());

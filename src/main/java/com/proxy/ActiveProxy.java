@@ -15,7 +15,6 @@ public class ActiveProxy implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.print("在打印前，我动态代理了一下");
         return method.invoke(print,args);
     }
 }

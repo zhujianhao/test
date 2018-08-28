@@ -16,8 +16,8 @@ public class ServerHandler  extends SimpleChannelInboundHandler {
         String data=String.valueOf(msg);
         System.out.println("Server: " + data);
         //写给客户端
-        String response = "我是反馈的信息";
-        ctx.writeAndFlush(Unpooled.copiedBuffer("888".getBytes()));
+        String response = "我是反馈的信息"+"$_";
+        ctx.writeAndFlush(Unpooled.copiedBuffer(response.getBytes()));
         //.addListener(ChannelFutureListener.CLOSE);
 
 

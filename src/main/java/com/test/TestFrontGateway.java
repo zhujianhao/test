@@ -91,11 +91,11 @@ public class TestFrontGateway {
        sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
        sParaTemp.put(ParamsKeyConstant.OPER_ID,"Z001");
 
-       sParaTemp.put("startDate","2018-07-19");
-       sParaTemp.put("endDate","2018-07-19");
+       sParaTemp.put("startDate","2018-08-13");
+       sParaTemp.put("endDate","2018-08-13");
        sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QueryRegistrationDepList);
        Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
-       String result = HttpClientUtils.post(localUrl,sPara);
+       String result = HttpClientUtils.post(prodUrl,sPara);
        JSONObject array= JSON.parseObject(result);
        System.out.print(result);
    }
@@ -106,16 +106,16 @@ public class TestFrontGateway {
     @Test
     public void testQueryRegistDept() throws IOException {
         Map<String, String> sParaTemp = new HashMap();
-        sParaTemp.put(ParamsKeyConstant.REG_MODE,"1");
-        sParaTemp.put(ParamsKeyConstant.REG_TYPE,"2");
-        sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "APP");
+        sParaTemp.put(ParamsKeyConstant.REG_MODE,"2");
+        sParaTemp.put(ParamsKeyConstant.REG_TYPE,"5");
+        sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
-        sParaTemp.put(ParamsKeyConstant.OPER_ID,"Z001");
+        sParaTemp.put(ParamsKeyConstant.OPER_ID,"Z016");
         sParaTemp.put(ParamsKeyConstant.HOSP_CODE, String.valueOf(""));
         sParaTemp.put(ParamsKeyConstant.HIS_CODE, String.valueOf(""));
         sParaTemp.put(ParamsKeyConstant.DEPT_CODE,"020801");
-        sParaTemp.put(ParamsKeyConstant.START_DATE,"2018-07-18");
-        sParaTemp.put(ParamsKeyConstant.END_DATE,"2018-07-18");
+        sParaTemp.put(ParamsKeyConstant.START_DATE,"2018-08-15");
+        sParaTemp.put(ParamsKeyConstant.END_DATE,"2018-08-15");
         sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QueryRegistrationScheduleInfoList);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
         String result = HttpClientUtils.post(localUrl,sPara);
@@ -149,7 +149,7 @@ public class TestFrontGateway {
         sParaTemp.put(ParamsKeyConstant.DOCT_CODE,"0150");
         sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QUERYHOSPITALALLDOC);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
-        String result = HttpClientUtils.post(url,sPara);
+        String result = HttpClientUtils.post(prodUrl,sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
@@ -499,10 +499,10 @@ public class TestFrontGateway {
         Map<String, String> sParaTemp = new HashMap();
         sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
-        sParaTemp.put(ParamsKeyConstant.AREA_CODE,"030101");
+        sParaTemp.put(ParamsKeyConstant.AREA_CODE,"030102");
         sParaTemp.put(ParamsKeyConstant.SERVICE,HttpServiceName.QueryInhosWardInfo);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
-        String result = HttpClientUtils.post(localUrl,sPara);
+        String result = HttpClientUtils.post(prodUrl,sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
@@ -512,11 +512,11 @@ public class TestFrontGateway {
         Map<String, String> sParaTemp = new HashMap();
         sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
-        sParaTemp.put(ParamsKeyConstant.AREA_CODE,"030107");
-        sParaTemp.put(ParamsKeyConstant.WARD_NO,"701");
+        sParaTemp.put(ParamsKeyConstant.AREA_CODE,"030102");
+        sParaTemp.put(ParamsKeyConstant.WARD_NO,"214");
         sParaTemp.put(ParamsKeyConstant.SERVICE,HttpServiceName.QueryInhosWardInfoItem);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
-        String result = HttpClientUtils.post(localUrl,sPara);
+        String result = HttpClientUtils.post(prodUrl,sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
@@ -632,10 +632,10 @@ public class TestFrontGateway {
         sParaTemp.put(ParamsKeyConstant.FLOW_ID,"1111111111111116");
 
 
-        sParaTemp.put(ParamsKeyConstant.OUT_TRADE_NO,"01020010120180806143918788570071");
-        sParaTemp.put("outRefundNo","T00000000000000111130");
-        sParaTemp.put("fee","17.5");
-        sParaTemp.put("reason","高戈部分退费17.5元");
+        sParaTemp.put(ParamsKeyConstant.OUT_TRADE_NO,"01020010120180824103052578538189");
+        sParaTemp.put("outRefundNo","T00000000000000111133");
+        sParaTemp.put("fee","50");
+        sParaTemp.put("reason","温迪退挂号费50元");
 
         sParaTemp.put(ParamsKeyConstant.SERVICE,HttpServiceName.BackFeeUserCash);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
@@ -710,12 +710,12 @@ public class TestFrontGateway {
         Map<String, String> sParaTemp = new HashMap();
         sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
-        sParaTemp.put(ParamsKeyConstant.PATIENT_ID,"20234");
+        sParaTemp.put(ParamsKeyConstant.PATIENT_ID,"19330");
         sParaTemp.put(ParamsKeyConstant.CARD_TYPE,"-1");
         sParaTemp.put(ParamsKeyConstant.OPER_ID,"Z001");
         sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QueryInhosPatientInfo);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
-        String result = HttpClientUtils.post(localUrl,sPara);
+        String result = HttpClientUtils.post(prodUrl,sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
 
@@ -727,12 +727,12 @@ public class TestFrontGateway {
         Map<String, String> sParaTemp = new HashMap();
         sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
-        sParaTemp.put(ParamsKeyConstant.PATIENT_ID,"1726919");
-        sParaTemp.put("startDate","2017-12-24");
-        sParaTemp.put("endDate","2017-12-25");
+        sParaTemp.put(ParamsKeyConstant.PATIENT_ID,"19330");
+        sParaTemp.put("startDate","2018-07-01");
+        sParaTemp.put("endDate","2018-08-08");
         sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QueryInhosBillItemList);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
-        String result = HttpClientUtils.post(url,sPara);
+        String result = HttpClientUtils.post(prodUrl,sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
