@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.DeptMapper">
+  <resultMap id="BaseResultMap" type="com.bean.Dept">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="corp_id" jdbcType="BIGINT" property="corpId" />
+    <result column="corp_code" jdbcType="VARCHAR" property="corpCode" />
+    <result column="parent_dept_code" jdbcType="VARCHAR" property="parentDeptCode" />
+    <result column="parent_dept_name" jdbcType="VARCHAR" property="parentDeptName" />
+    <result column="parent_dept_py" jdbcType="VARCHAR" property="parentDeptPy" />
+    <result column="parent_dept_simple_py" jdbcType="VARCHAR" property="parentDeptSimplePy" />
+    <result column="dept_code" jdbcType="VARCHAR" property="deptCode" />
+    <result column="dept_name" jdbcType="VARCHAR" property="deptName" />
+    <result column="dept_py" jdbcType="VARCHAR" property="deptPy" />
+    <result column="dept_simple_py" jdbcType="VARCHAR" property="deptSimplePy" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="dept_intro" jdbcType="VARCHAR" property="deptIntro" />
+    <result column="serial_num" jdbcType="INTEGER" property="serialNum" />
+    <result column="status" jdbcType="BIT" property="status" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modify" jdbcType="TIMESTAMP" property="gmtModify" />
+    <result column="gender_limit" jdbcType="INTEGER" property="genderLimit" />
+    <result column="age_limit" jdbcType="VARCHAR" property="ageLimit" />
+    <result column="dept_type" jdbcType="INTEGER" property="deptType" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+  </resultMap>
+</mapper>

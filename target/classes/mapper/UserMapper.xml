@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.bean.User">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="corp_id" jdbcType="VARCHAR" property="corpId" />
+    <result column="corp_name" jdbcType="VARCHAR" property="corpName" />
+    <result column="gmt_modify" jdbcType="TIMESTAMP" property="gmtModify" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="is_deleted" jdbcType="INTEGER" property="isDeleted" />
+    <result column="corp_area_id" jdbcType="VARCHAR" property="corpAreaId" />
+  </resultMap>
+</mapper>

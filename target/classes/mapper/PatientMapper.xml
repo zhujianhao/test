@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.PatientMapper">
+  <resultMap id="BaseResultMap" type="com.bean.Patient">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+    <result column="queue_code" jdbcType="VARCHAR" property="queueCode" />
+    <result column="order_no" jdbcType="INTEGER" property="orderNo" />
+    <result column="order_type" jdbcType="VARCHAR" property="orderType" />
+    <result column="weight" jdbcType="INTEGER" property="weight" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="patient_no" jdbcType="VARCHAR" property="patientNo" />
+    <result column="doctor_name" jdbcType="VARCHAR" property="doctorName" />
+    <result column="call_times" jdbcType="INTEGER" property="callTimes" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="age" jdbcType="VARCHAR" property="age" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="is_back" jdbcType="BIT" property="isBack" />
+    <result column="corp_id" jdbcType="VARCHAR" property="corpId" />
+    <result column="corp_name" jdbcType="VARCHAR" property="corpName" />
+    <result column="card_no" jdbcType="VARCHAR" property="cardNo" />
+    <result column="card_type" jdbcType="INTEGER" property="cardType" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="id_no" jdbcType="VARCHAR" property="idNo" />
+    <result column="guard_no" jdbcType="VARCHAR" property="guardNo" />
+    <result column="diag_room" jdbcType="VARCHAR" property="diagRoom" />
+    <result column="small_dept_code" jdbcType="VARCHAR" property="smallDeptCode" />
+    <result column="small_dept_name" jdbcType="VARCHAR" property="smallDeptName" />
+    <result column="big_dept_code" jdbcType="VARCHAR" property="bigDeptCode" />
+    <result column="big_dept_name" jdbcType="VARCHAR" property="bigDeptName" />
+    <result column="waiting_time" jdbcType="TIMESTAMP" property="waitingTime" />
+    <result column="pre_time" jdbcType="TIMESTAMP" property="preTime" />
+    <result column="calling_time" jdbcType="TIMESTAMP" property="callingTime" />
+    <result column="complete_time" jdbcType="TIMESTAMP" property="completeTime" />
+    <result column="doctor_no" jdbcType="VARCHAR" property="doctorNo" />
+    <result column="doctor_code" jdbcType="VARCHAR" property="doctorCode" />
+    <result column="pass_time" jdbcType="TIMESTAMP" property="passTime" />
+    <result column="doctor_choose" jdbcType="TINYINT" property="doctorChoose" />
+    <result column="reg_id" jdbcType="VARCHAR" property="regId" />
+    <result column="interval_flag" jdbcType="TINYINT" property="intervalFlag" />
+    <result column="reg_time" jdbcType="TIMESTAMP" property="regTime" />
+    <result column="reg_type" jdbcType="TINYINT" property="regType" />
+    <result column="queue_name" jdbcType="VARCHAR" property="queueName" />
+    <result column="doctor_address" jdbcType="VARCHAR" property="doctorAddress" />
+    <result column="diag_room_code" jdbcType="VARCHAR" property="diagRoomCode" />
+    <result column="whether_notice_his" jdbcType="TINYINT" property="whetherNoticeHis" />
+    <result column="reg_mode" jdbcType="TINYINT" property="regMode" />
+    <result column="start_time" jdbcType="TIMESTAMP" property="startTime" />
+    <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
+    <result column="order_no_tag" jdbcType="VARCHAR" property="orderNoTag" />
+    <result column="dest_doctor_no" jdbcType="VARCHAR" property="destDoctorNo" />
+    <result column="dest_doctor_code" jdbcType="VARCHAR" property="destDoctorCode" />
+    <result column="dest_queue_code" jdbcType="VARCHAR" property="destQueueCode" />
+    <result column="dest_doctor_name" jdbcType="VARCHAR" property="destDoctorName" />
+    <result column="call_priority" jdbcType="INTEGER" property="callPriority" />
+    <result column="nurse_call_times" jdbcType="INTEGER" property="nurseCallTimes" />
+    <result column="pre_nurse_call_time" jdbcType="TIMESTAMP" property="preNurseCallTime" />
+    <result column="med_level" jdbcType="VARCHAR" property="medLevel" />
+  </resultMap>
+</mapper>

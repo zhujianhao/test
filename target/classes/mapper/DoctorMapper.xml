@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.DoctorMapper">
+  <resultMap id="BaseResultMap" type="com.bean.Doctor">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="queue_code" jdbcType="VARCHAR" property="queueCode" />
+    <result column="doctor_name" jdbcType="VARCHAR" property="doctorName" />
+    <result column="doctor_code" jdbcType="VARCHAR" property="doctorCode" />
+    <result column="diag_room" jdbcType="VARCHAR" property="diagRoom" />
+    <result column="login_time" jdbcType="TIMESTAMP" property="loginTime" />
+    <result column="logout_time" jdbcType="TIMESTAMP" property="logoutTime" />
+    <result column="is_online" jdbcType="TINYINT" property="isOnline" />
+    <result column="corp_id" jdbcType="VARCHAR" property="corpId" />
+    <result column="doctor_type" jdbcType="TINYINT" property="doctorType" />
+    <result column="doctor_address" jdbcType="VARCHAR" property="doctorAddress" />
+    <result column="queue_name" jdbcType="VARCHAR" property="queueName" />
+    <result column="doctor_sel" jdbcType="TINYINT" property="doctorSel" />
+    <result column="diag_room_code" jdbcType="VARCHAR" property="diagRoomCode" />
+    <result column="priority" jdbcType="TINYINT" property="priority" />
+    <result column="back_flag" jdbcType="INTEGER" property="backFlag" />
+    <result column="muti_poly_char" jdbcType="VARCHAR" property="mutiPolyChar" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+    <result column="small_dept_code" jdbcType="VARCHAR" property="smallDeptCode" />
+    <result column="small_dept_name" jdbcType="VARCHAR" property="smallDeptName" />
+  </resultMap>
+</mapper>

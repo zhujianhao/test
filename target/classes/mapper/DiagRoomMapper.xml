@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.DiagRoomMapper">
+  <resultMap id="BaseResultMap" type="com.bean.DiagRoom">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="corp_id" jdbcType="BIGINT" property="corpId" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+    <result column="diag_room" jdbcType="VARCHAR" property="diagRoom" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modify" jdbcType="TIMESTAMP" property="gmtModify" />
+    <result column="diag_room_code" jdbcType="VARCHAR" property="diagRoomCode" />
+    <result column="doorplate" jdbcType="VARCHAR" property="doorplate" />
+    <result column="doorplate_code" jdbcType="VARCHAR" property="doorplateCode" />
+    <result column="diag_room_alias" jdbcType="VARCHAR" property="diagRoomAlias" />
+    <result column="device_nick" jdbcType="VARCHAR" property="deviceNick" />
+  </resultMap>
+</mapper>

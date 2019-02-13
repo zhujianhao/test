@@ -2,25 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd06225b-3e6a-41be-9b1d-40e186fac98d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cglib/CgProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cglib/Print.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cglib/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaNIO/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaNIO/JavaNIO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaNIO/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javaNIO/TestService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/proxy/Extra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/FileRead.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/test/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/utils/ReadFileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/httpTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/httpTest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/excutor/TestThreadExcutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/excutor/TestThreadExcutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netty/ServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netty/ServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proxy/ActiveProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proxy/ActiveProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/proxy/TestProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/proxy/TestProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/test/TestFrontGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test/TestFrontGateway.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/test1.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +21,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/httpTest$TestFrontGateway_testQueryWaitBalanceInfo.ic" NAME="TestFrontGateway.testQueryWaitBalanceInfo Coverage Results" MODIFIED="1546230222449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.test.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/httpTest$TestFrontGateway_testQueryRegistrationRecord.ic" NAME="TestFrontGateway.testQueryRegistrationRecord Coverage Results" MODIFIED="1527502881278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/httpTest$TestFrontGateway_testReport.ic" NAME="TestFrontGateway.testReport Coverage Results" MODIFIED="1547890716011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.test.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/httpTest$TestFrontGateway_foundBack.coverage" NAME="TestFrontGateway.foundBack Coverage Results" MODIFIED="1521364942586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -57,126 +53,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NioEventLoopGroup.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/nio/NioEventLoopGroup.java">
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
+            <state relative-caret-position="3993">
+              <caret line="135" column="50" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="50" />
               <folding>
-                <element signature="e#1713#1714#0" expanded="true" />
-                <element signature="e#1736#1737#0" expanded="true" />
-                <element signature="e#1986#1987#0" expanded="true" />
-                <element signature="e#2033#2034#0" expanded="true" />
-                <element signature="e#2461#2462#0" expanded="true" />
-                <element signature="e#2530#2531#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MultithreadEventLoopGroup.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/MultithreadEventLoopGroup.java">
+      <file leaf-file-name="bean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/bean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+            <state relative-caret-position="165">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestFrontGateway.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/TestFrontGateway.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="1016" column="18" selection-start-line="1016" selection-start-column="18" selection-end-line="1016" selection-end-column="18" />
               <folding>
-                <element signature="e#3118#3119#0" expanded="true" />
-                <element signature="e#3165#3166#0" expanded="true" />
-                <element signature="e#3343#3344#0" expanded="true" />
-                <element signature="e#3390#3391#0" expanded="true" />
-                <element signature="e#3465#3466#0" expanded="true" />
-                <element signature="e#3512#3513#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MultithreadEventExecutorGroup.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/util/concurrent/MultithreadEventExecutorGroup.java">
+      <file leaf-file-name="Task.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javaNIO/Task.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="157" column="37" selection-start-line="157" selection-start-column="37" selection-end-line="157" selection-end-column="37" />
-              <folding>
-                <element signature="e#5733#5734#0" expanded="true" />
-                <element signature="e#5770#5771#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="198">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractEventExecutor.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/util/concurrent/AbstractEventExecutor.java">
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javaNIO/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
-              <folding>
-                <element signature="e#1752#1753#0" expanded="true" />
-                <element signature="e#1788#1789#0" expanded="true" />
-                <element signature="e#1999#2000#0" expanded="true" />
-                <element signature="e#2057#2058#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="66">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractScheduledEventExecutor.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/util/concurrent/AbstractScheduledEventExecutor.java">
+      <file leaf-file-name="JavaNIO.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javaNIO/JavaNIO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="46" column="12" lean-forward="true" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
-              <folding>
-                <element signature="e#1693#1694#0" expanded="true" />
-                <element signature="e#1722#1723#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="675">
+              <caret line="78" column="36" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NioEventLoop.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/nio/NioEventLoop.java">
+      <file leaf-file-name="SelectionKey.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../java/32Bit/jre/lib/rt.jar!/java/nio/channels/SelectionKey.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="172" column="47" selection-start-line="172" selection-start-column="47" selection-end-line="172" selection-end-column="47" />
+            <state relative-caret-position="231">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SelectorProvider.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../java/jdk/src.zip!/java/nio/channels/spi/SelectorProvider.java">
+      <file leaf-file-name="TestService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/javaNIO/TestService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="229" column="37" selection-start-line="229" selection-start-column="37" selection-end-line="229" selection-end-column="37" />
+            <state relative-caret-position="297">
+              <caret line="10" column="15" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SelectorProviderImpl.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../java/jdk/jre/lib/rt.jar!/sun/nio/ch/SelectorProviderImpl.class">
+      <file leaf-file-name="HttpServiceName.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../maven_repo2/com/yuantu/frontgateway-client/1.0.0-SNAPSHOT/frontgateway-client-1.0.0-20170805.071302-77.jar!/com/yuantu/client/constant/HttpServiceName.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WindowsSelectorProvider.class" pinned="false" current-in-tab="true">
-        <entry file="jar://$PROJECT_DIR$/../../java/jdk/jre/lib/rt.jar!/sun/nio/ch/WindowsSelectorProvider.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/netty/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-              <folding>
-                <element signature="e#1324#1912#0" expanded="true" />
-                <element signature="e#1911#1912#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="693">
+              <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="98" />
             </state>
           </provider>
         </entry>
@@ -193,37 +152,40 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>所有</find>
-      <find>queryDe</find>
-      <find>queryHos</find>
-      <find>LisR</find>
-      <find />
-      <find>sched</find>
-      <find>bind</find>
-      <find>inhos</find>
-      <find>queryDo</find>
-      <find>queryDoc</find>
+      <find>put()</find>
+      <find>put</find>
+      <find>科室id</find>
+      <find>front</find>
+      <find>tk</find>
+      <find>sq</find>
+      <find>balance</find>
+      <find>缴费结算</find>
       <find>ward</find>
+      <find>{&quot;success&quot;:true,&quot;msg&quot;:null,&quot;code&quot;:0,&quot;data&quot;:[{&quot;deptCode&quot;:&quot;021204&quot;,&quot;deptName&quot;:&quot;特需门诊&quot;,&quot;parentDeptCode&quot;:null,&quot;parentDeptName&quot;:null,&quot;simplePy&quot;:null,&quot;fullPy&quot;:null,&quot;remainderNumber&quot;:null,&quot;queueNumber&quot;:null,&quot;deptIntro&quot;:null,&quot;extend&quot;:null,&quot;phone&quot;:null,&quot;address&quot;:null},{&quot;deptCode&quot;:&quot;020201&quot;,&quot;deptName&quot;:&quot;血液科门诊一&quot;,&quot;parentDeptCode&quot;:null,&quot;parentDeptName&quot;:null,&quot;simplePy&quot;:null,&quot;fullPy&quot;:null,&quot;remainderNumber&quot;:null,&quot;queueNumber&quot;:null,&quot;deptIntro&quot;:null,&quot;extend&quot;:null,&quot;phone&quot;:null,&quot;address&quot;:null},{&quot;deptCode&quot;:&quot;020230&quot;,&quot;deptName&quot;:&quot;血液科门诊二&quot;,&quot;parentDeptCode&quot;:null,&quot;parentDeptName&quot;:null,&quot;simplePy&quot;:null,&quot;fullPy&quot;:null,&quot;remainderNumber&quot;:null,&quot;queueNumber&quot;:null,&quot;deptIntro&quot;:null,&quot;extend&quot;:null,&quot;phone&quot;:null,&quot;address&quot;:null},{&quot;deptCode&quot;:&quot;020231&quot;,&quot;deptName&quot;:&quot;血液科门诊三&quot;,&quot;parentDeptCode&quot;:null,&quot;parentDeptName&quot;:null,&quot;simplePy&quot;:null,&quot;fullPy&quot;:null,&quot;remainderNumber&quot;:null,&quot;queueNumber&quot;:null,&quot;deptIntro&quot;:null,&quot;extend&quot;:null,&quot;phone&quot;:null,&quot;address&quot;:null}]}</find>
       <find>netty</find>
-      <find>regist</find>
-      <find>addtask</find>
-      <find>offer</find>
-      <find>taskQueue</find>
-      <find>do</find>
-      <find>dore</find>
-      <find>addlast</find>
+      <find>queryD</find>
+      <find>TRADE_TIME</find>
+      <find>8000</find>
+      <find>createO</find>
+      <find>wait</find>
       <find>退费</find>
-      <find>init</find>
-      <find>fireChannelA</find>
-      <find>fireChannelReg</find>
-      <find>doReadMessages</find>
-      <find>unsafe.read()</find>
-      <find>run</find>
-      <find>addListener</find>
-      <find>regi</find>
-      <find>register</find>
-      <find>unsafe</find>
+      <find>create</find>
+      <find>888888888</find>
+      <find>balanceBill</find>
+      <find>jfj</find>
+      <find>recorde</find>
+      <find>record</find>
+      <find>dept</find>
+      <find>yuantu.wap.sao.ma.query.order&quot;</find>
+      <find>y</find>
+      <find>交金</find>
+      <find>3301</find>
+      <find>queryPatient</find>
+      <find>query.p</find>
     </findStrings>
+    <replaceStrings>
+      <replace>hos</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -231,10 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/kinds/AppleFormateImp/Filters.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/Tttt.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/IsUniqueChars.java" />
-        <option value="$PROJECT_DIR$/src/test/智慧分诊.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/Cast.java" />
         <option value="$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class" />
         <option value="$PROJECT_DIR$/src/main/java/generatorConfig.xml" />
@@ -268,7 +226,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/test1.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proxy/TestProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/proxy/ActiveProxy.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/cglib/Print.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cglib/CgProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cglib/Test.java" />
@@ -277,11 +234,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/javaNIO/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/javaNIO/TestService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netty/ServerOutHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/TestFrontGateway.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netty/ServerHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netty/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/javaNIO/JavaNIO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netty/Server.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/utils/ReadFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/utils/ReadFileUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/FileRead.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/javaNIO/JavaNIO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/TestFrontGateway.java" />
       </list>
     </option>
   </component>
@@ -294,8 +256,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$PROJECT_DIR$/../../maven/apache-maven-3.5.3-bin/apache-maven-3.5.3" />
-        <option name="userSettingsFile" value="E:\zjh\maven\apache-maven-3.5.3-bin\apache-maven-3.5.3\conf\settings.xml" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../maven/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="E:\zjh\maven\apache-maven-3.6.0\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -313,9 +275,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="-321" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-1940" />
+    <option name="y" value="-304" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -325,9 +287,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -377,7 +339,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="netty" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="httpTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="httpTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="httpTest" type="b2602c69:ProjectViewProjectNode" />
@@ -385,22 +356,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="httpTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="httpTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="httpTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="httpTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -414,11 +369,11 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../frontgatewaypay/frontgatewaypay/pay" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../zjdc/zydc" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3137931" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -450,53 +405,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Client (1)">
+  <component name="RunManager" selected="JUnit.TestFrontGateway.testQueryInhosBillItemList">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-    </configuration>
-    <configuration name="Client (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.netty.Client" />
-      <module name="httpTest" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.netty.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.javaNIO.Client" />
-      <module name="httpTest" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.javaNIO.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.netty.Server" />
-      <module name="httpTest" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.netty.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="TestService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.javaNIO.TestService" />
-      <module name="httpTest" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.javaNIO.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -514,6 +425,98 @@
       <option name="PACKAGE_NAME" value="com.test" />
       <option name="MAIN_CLASS_NAME" value="com.test.TestFrontGateway" />
       <option name="METHOD_NAME" value="foundBack" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestFrontGateway.testBalanceBillRecord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="httpTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.TestFrontGateway" />
+      <option name="METHOD_NAME" value="testBalanceBillRecord" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestFrontGateway.testQueryInhosBillItemList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="httpTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.TestFrontGateway" />
+      <option name="METHOD_NAME" value="testQueryInhosBillItemList" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestFrontGateway.testQueryInhosPatientInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="httpTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.TestFrontGateway" />
+      <option name="METHOD_NAME" value="testQueryInhosPatientInfo" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestFrontGateway.testReport" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="httpTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.TestFrontGateway" />
+      <option name="METHOD_NAME" value="testReport" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -623,19 +626,19 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list>
-      <item itemvalue="Application.TestService" />
-      <item itemvalue="Application.Client" />
-      <item itemvalue="Application.Server" />
-      <item itemvalue="Application.Client (1)" />
       <item itemvalue="JUnit.TestFrontGateway.foundBack" />
+      <item itemvalue="JUnit.TestFrontGateway.testBalanceBillRecord" />
+      <item itemvalue="JUnit.TestFrontGateway.testReport" />
+      <item itemvalue="JUnit.TestFrontGateway.testQueryInhosPatientInfo" />
+      <item itemvalue="JUnit.TestFrontGateway.testQueryInhosBillItemList" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Client (1)" />
-        <item itemvalue="Application.Server" />
+        <item itemvalue="JUnit.TestFrontGateway.testQueryInhosBillItemList" />
+        <item itemvalue="JUnit.TestFrontGateway.testQueryInhosPatientInfo" />
+        <item itemvalue="JUnit.TestFrontGateway.testReport" />
+        <item itemvalue="JUnit.TestFrontGateway.testBalanceBillRecord" />
         <item itemvalue="JUnit.TestFrontGateway.foundBack" />
-        <item itemvalue="Application.Client" />
-        <item itemvalue="Application.TestService" />
       </list>
     </recent_temporary>
   </component>
@@ -786,6 +789,85 @@
       <workItem from="1535160947629" duration="816000" />
       <workItem from="1535165656708" duration="14055000" />
       <workItem from="1535329986228" duration="25220000" />
+      <workItem from="1535416559434" duration="16311000" />
+      <workItem from="1535511749641" duration="7102000" />
+      <workItem from="1535589010538" duration="1479000" />
+      <workItem from="1535676634485" duration="6119000" />
+      <workItem from="1535934779764" duration="4944000" />
+      <workItem from="1536021170461" duration="2999000" />
+      <workItem from="1536108666579" duration="1260000" />
+      <workItem from="1536195838748" duration="576000" />
+      <workItem from="1536284714556" duration="2374000" />
+      <workItem from="1536540924755" duration="2613000" />
+      <workItem from="1536626953987" duration="593000" />
+      <workItem from="1536712947191" duration="577000" />
+      <workItem from="1536799565579" duration="581000" />
+      <workItem from="1536886866842" duration="577000" />
+      <workItem from="1537144558505" duration="566000" />
+      <workItem from="1537230794106" duration="557000" />
+      <workItem from="1537317687414" duration="578000" />
+      <workItem from="1537405706894" duration="590000" />
+      <workItem from="1537490579957" duration="574000" />
+      <workItem from="1537835805367" duration="1273000" />
+      <workItem from="1537861336356" duration="588000" />
+      <workItem from="1537862654815" duration="588000" />
+      <workItem from="1537925474815" duration="552000" />
+      <workItem from="1539587788970" duration="1790000" />
+      <workItem from="1539655500488" duration="999000" />
+      <workItem from="1539764538839" duration="636000" />
+      <workItem from="1539766701426" duration="1682000" />
+      <workItem from="1539827282932" duration="5020000" />
+      <workItem from="1539920189279" duration="3972000" />
+      <workItem from="1540184583467" duration="766000" />
+      <workItem from="1540279788783" duration="928000" />
+      <workItem from="1540359450673" duration="11132000" />
+      <workItem from="1540886737301" duration="6850000" />
+      <workItem from="1541486853356" duration="759000" />
+      <workItem from="1541648779881" duration="795000" />
+      <workItem from="1542248824779" duration="858000" />
+      <workItem from="1542336789586" duration="1235000" />
+      <workItem from="1542851104470" duration="597000" />
+      <workItem from="1542940712686" duration="1938000" />
+      <workItem from="1543197018909" duration="1918000" />
+      <workItem from="1543390983192" duration="2364000" />
+      <workItem from="1543452135394" duration="2103000" />
+      <workItem from="1543975498142" duration="4795000" />
+      <workItem from="1544411180049" duration="8182000" />
+      <workItem from="1544519844227" duration="650000" />
+      <workItem from="1544588395352" duration="6823000" />
+      <workItem from="1544768783730" duration="6732000" />
+      <workItem from="1545011931326" duration="3149000" />
+      <workItem from="1545097402306" duration="17434000" />
+      <workItem from="1545190670536" duration="10511000" />
+      <workItem from="1545291637883" duration="9737000" />
+      <workItem from="1545360856117" duration="16538000" />
+      <workItem from="1545612394378" duration="12203000" />
+      <workItem from="1545707848667" duration="8882000" />
+      <workItem from="1545803605545" duration="1168000" />
+      <workItem from="1545876060468" duration="23137000" />
+      <workItem from="1545999496570" duration="3098000" />
+      <workItem from="1546045801196" duration="10981000" />
+      <workItem from="1546141909092" duration="3686000" />
+      <workItem from="1546222357174" duration="8309000" />
+      <workItem from="1546392410092" duration="14135000" />
+      <workItem from="1546493906460" duration="1954000" />
+      <workItem from="1546584895582" duration="3616000" />
+      <workItem from="1546831100140" duration="919000" />
+      <workItem from="1546997438904" duration="11831000" />
+      <workItem from="1547087512406" duration="12477000" />
+      <workItem from="1547169185724" duration="18826000" />
+      <workItem from="1547429346785" duration="4948000" />
+      <workItem from="1547516086227" duration="4534000" />
+      <workItem from="1547529458992" duration="2925000" />
+      <workItem from="1547603238930" duration="6092000" />
+      <workItem from="1547618145777" duration="2135000" />
+      <workItem from="1547695089022" duration="1940000" />
+      <workItem from="1547781145140" duration="2475000" />
+      <workItem from="1547876552860" duration="5406000" />
+      <workItem from="1548145445787" duration="1385000" />
+      <workItem from="1548224959542" duration="2135000" />
+      <workItem from="1548406717425" duration="1066000" />
+      <workItem from="1550022836102" duration="3117000" />
     </task>
     <task id="LOCAL-00001" summary="····">
       <created>1519693006324</created>
@@ -815,78 +897,92 @@
       <option name="project" value="LOCAL" />
       <updated>1533694019561</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="NIO">
+      <created>1535416615756</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1535416615756</updated>
+    </task>
+    <task id="LOCAL-00006" summary="NIO">
+      <created>1535416713593</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1535416713593</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestFrontGateway_testWard - 2018.08.14 at 13h 43m 23s.xml">
-      <configuration name="TestFrontGateway.testWard" configurationId="JUnit" />
+    <history-entry file="TestFrontGateway_testQueryInhosPatientInfo - 2019.01.23 at 14h 34m 59s.xml">
+      <configuration name="TestFrontGateway.testQueryInhosPatientInfo" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestFrontGateway_testWard - 2018.08.14 at 13h 44m 03s.xml">
-      <configuration name="TestFrontGateway.testWard" configurationId="JUnit" />
+    <history-entry file="TestFrontGateway_testQueryInhosBillItemList - 2019.01.23 at 14h 37m 14s.xml">
+      <configuration name="TestFrontGateway.testQueryInhosBillItemList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestFrontGateway_testWardItem - 2018.08.14 at 13h 44m 41s.xml">
-      <configuration name="TestFrontGateway.testWardItem" configurationId="JUnit" />
+    <history-entry file="TestFrontGateway_testQueryInhosBillItemList - 2019.01.23 at 14h 37m 30s.xml">
+      <configuration name="TestFrontGateway.testQueryInhosBillItemList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestFrontGateway_testWardItem - 2018.08.14 at 13h 44m 51s.xml">
-      <configuration name="TestFrontGateway.testWardItem" configurationId="JUnit" />
+    <history-entry file="TestFrontGateway_testQueryInhosBillItemList - 2019.01.23 at 14h 54m 35s.xml">
+      <configuration name="TestFrontGateway.testQueryInhosBillItemList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestFrontGateway_testQueryRegistDept - 2018.08.15 at 14h 06m 27s.xml">
-      <configuration name="TestFrontGateway.testQueryRegistDept" configurationId="JUnit" />
+    <history-entry file="TestFrontGateway_testQueryInhosBillItemList - 2019.01.23 at 14h 54m 52s.xml">
+      <configuration name="TestFrontGateway.testQueryInhosBillItemList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestFrontGateway_testQueryRegistDept - 2018.08.20 at 11h 30m 17s.xml">
-      <configuration name="TestFrontGateway.testQueryRegistDept" configurationId="JUnit" />
+    <history-entry file="TestFrontGateway_testQueryInhosBillItemList - 2019.01.25 at 17h 05m 04s.xml">
+      <configuration name="TestFrontGateway.testQueryInhosBillItemList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestFrontGateway_foundBack - 2018.08.21 at 10h 59m 27s.xml">
-      <configuration name="TestFrontGateway.foundBack" configurationId="JUnit" />
+    <history-entry file="TestFrontGateway_testQueryInhosBillItemList - 2019.01.25 at 17h 05m 20s.xml">
+      <configuration name="TestFrontGateway.testQueryInhosBillItemList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestFrontGateway_foundBack - 2018.08.21 at 11h 00m 46s.xml">
-      <configuration name="TestFrontGateway.foundBack" configurationId="JUnit" />
+    <history-entry file="TestFrontGateway_testQueryInhosBillItemList - 2019.01.25 at 17h 05m 32s.xml">
+      <configuration name="TestFrontGateway.testQueryInhosBillItemList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestFrontGateway_foundBack - 2018.08.24 at 17h 07m 17s.xml">
-      <configuration name="TestFrontGateway.foundBack" configurationId="JUnit" />
+    <history-entry file="TestFrontGateway_testQueryInhosBillItemList - 2019.01.25 at 17h 05m 44s.xml">
+      <configuration name="TestFrontGateway.testQueryInhosBillItemList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestFrontGateway_foundBack - 2018.08.24 at 17h 11m 49s.xml">
-      <configuration name="TestFrontGateway.foundBack" configurationId="JUnit" />
+    <history-entry file="TestFrontGateway_testQueryInhosBillItemList - 2019.01.25 at 17h 06m 18s.xml">
+      <configuration name="TestFrontGateway.testQueryInhosBillItemList" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="590507000" />
+    <option name="totallyTimeSpent" value="948751000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-321" width="1936" height="1056" extended-state="6" />
+    <frame x="-1928" y="-321" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.4002181" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="8" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" sideWeight="0.4972973" visible="true" weight="0.07409382" />
+      <window_info anchor="right" id="Maven Projects" order="3" sideWeight="0.49325338" visible="true" weight="0.15884861" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32497275" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32861805" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32497275" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.21592148" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6661211" visible="true" weight="0.20042644" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5976027" visible="true" weight="0.26599148" />
       <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
-      <window_info id="Structure" order="1" sideWeight="0.33387887" side_tool="true" visible="true" weight="0.20042644" />
+      <window_info id="Structure" order="1" sideWeight="0.40239727" side_tool="true" weight="0.1369936" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.33369684" />
       <window_info id="Favorites" order="2" sideWeight="0.50054526" side_tool="true" weight="0.1663113" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.28244275" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3991276" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Data View" order="3" weight="0.32995737" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="4" sideWeight="0.5027027" side_tool="true" visible="true" weight="0.10438729" />
+      <window_info anchor="right" id="Coverage" order="4" sideWeight="0.50674665" side_tool="true" weight="0.15884861" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Data View" order="3" weight="0.32995737" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
@@ -895,29 +991,29 @@
       <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="right" id="Data View" order="6" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32934782" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -956,7 +1052,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="····" />
-    <option name="LAST_COMMIT_MESSAGE" value="····" />
+    <MESSAGE value="NIO" />
+    <option name="LAST_COMMIT_MESSAGE" value="NIO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -974,18 +1071,6 @@
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/netty/Server.java</url>
-          <line>39</line>
-          <properties />
-          <option name="timeStamp" value="110" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/util/concurrent/SingleThreadEventExecutor.java</url>
-          <line>886</line>
-          <properties />
-          <option name="timeStamp" value="111" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/util/concurrent/SingleThreadEventExecutor.java</url>
           <line>586</line>
           <properties />
@@ -998,45 +1083,63 @@
           <option name="timeStamp" value="113" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/bootstrap/ServerBootstrap.java</url>
-          <line>243</line>
-          <properties />
-          <option name="timeStamp" value="116" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/util/concurrent/SingleThreadEventExecutor.java</url>
           <line>539</line>
           <properties />
           <option name="timeStamp" value="119" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/nio/NioEventLoop.java</url>
-          <line>540</line>
+          <url>jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/bootstrap/AbstractBootstrap.java</url>
+          <line>290</line>
           <properties />
-          <option name="timeStamp" value="124" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/nio/AbstractNioMessageChannel.java</url>
-          <line>63</line>
-          <properties />
-          <option name="timeStamp" value="135" />
+          <option name="timeStamp" value="149" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="136" />
+      <option name="time" value="179" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>channel.eventLoop()</expression-string>
+        <expression-string>tempList[i].getPath()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>msg</expression-string>
+        <expression-string>files</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>tempList[i].toString()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>files.add(tempList[i].toString())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>JSON.parseObject(s,Result.class)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>corp</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>bean.class.getConstructor().newInstance()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>b</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -1045,505 +1148,237 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string />
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>executors</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>next()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>chooser.next()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>keys</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>var3</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../../java/jdk/src.zip!/java/lang/Thread.java">
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/ChannelFactory.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/ReflectiveChannelFactory.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/net/sourceforge/jexcelapi/jxl/2.6.12/jxl-2.6.12.jar!/jxl/Sheet.class" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/net/sourceforge/jexcelapi/jxl/2.6.12/jxl-2.6.12.jar!/jxl/read/biff/SheetImpl.class" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/ChannelFuture.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/util/concurrent/DefaultPromise.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/DefaultChannelPromise.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netty/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="747" selection-start-line="747" selection-end-line="747" />
+        <state relative-caret-position="528">
+          <caret line="59" column="46" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/socket/nio/NioSocketChannel.java">
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/bootstrap/AbstractBootstrap.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/MultithreadEventLoopGroup.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/SingleThreadEventLoop.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/util/concurrent/AbstractEventExecutor.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/EventLoopGroup.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/Channel.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/AbstractChannel.java" />
+    <entry file="jar://$PROJECT_DIR$/../../java/jdk/src.zip!/java/util/concurrent/Executor.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/util/concurrent/SingleThreadEventExecutor.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/util/concurrent/EventExecutor.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/org/mybatis/mybatis/3.3.0/mybatis-3.3.0-sources.jar!/org/apache/ibatis/binding/MapperProxy.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/org/mybatis/mybatis/3.3.0/mybatis-3.3.0-sources.jar!/org/apache/ibatis/binding/MapperProxyFactory.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/org/mybatis/mybatis/3.3.0/mybatis-3.3.0-sources.jar!/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/org/mybatis/mybatis/3.3.0/mybatis-3.3.0-sources.jar!/org/apache/ibatis/session/SqlSessionFactoryBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dao/WardInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="449" column="32" selection-start-line="449" selection-start-column="24" selection-end-line="449" selection-end-column="32" />
+        <state relative-caret-position="198">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../java/jdk/src.zip!/java/nio/channels/spi/AbstractSelectableChannel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dao/Area.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+        <state relative-caret-position="66">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../java/jdk/jre/lib/rt.jar!/sun/nio/ch/SocketChannelImpl.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dao/server/AreaDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-99">
-          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+        <state relative-caret-position="132">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../java/jdk/src.zip!/java/nio/channels/SelectableChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/ChannelHandlerContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="156" column="26" selection-start-line="156" selection-start-column="26" selection-end-line="156" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final.jar!/io/netty/channel/DefaultChannelHandlerContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#1003#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/ReflectiveChannelFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/bootstrap/ChannelFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
-          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/util/concurrent/EventExecutor.java">
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/com/yuantu/yuantu-util/1.0.1-SNAPSHOT/yuantu-util-1.0.1-20170504.110654-21-sources.jar!/com/yuantu/common/result/Result.java" />
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/com/yuantu/frontgateway-client/1.0.0-SNAPSHOT/frontgateway-client-1.0.0-20170805.071302-77.jar!/com/yuantu/client/security/RSA.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+        <state relative-caret-position="462">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../java/jdk/src.zip!/java/util/concurrent/Executor.java">
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/com/yuantu/frontgateway-client/1.0.0-SNAPSHOT/frontgateway-client-1.0.0-20170805.071302-77.jar!/com/yuantu/client/security/ParamsUtil.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="139" column="9" selection-start-line="139" selection-start-column="9" selection-end-line="139" selection-end-column="9" />
+        <state relative-caret-position="1584">
+          <caret line="58" column="24" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/nio/NioTask.java">
+    <entry file="jar://$PROJECT_DIR$/../../java/32Bit/jre/lib/rt.jar!/java/io/Reader.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+        <state relative-caret-position="1056">
+          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/ChannelOutboundHandlerAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/utils/ReadFileUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+        <state relative-caret-position="594">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/ChannelOutboundInvoker.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/FileRead.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="112" column="18" selection-start-line="112" selection-start-column="18" selection-end-line="112" selection-end-column="18" />
+        <state relative-caret-position="429">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/ChannelOutboundHandler.java">
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/com/yuantu/yuantu-util/1.0.1-SNAPSHOT/yuantu-util-1.0.1-20170504.110654-21.jar!/com/yuantu/common/date/DateUtil.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/Channel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="238" column="13" selection-start-line="238" selection-start-column="13" selection-end-line="238" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/AbstractChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="1072" column="28" selection-start-line="1072" selection-start-column="28" selection-end-line="1072" selection-end-column="28" />
-          <folding>
-            <element signature="e#4663#4664#0" expanded="true" />
-            <element signature="e#4718#4719#0" expanded="true" />
-            <element signature="e#5714#5715#0" expanded="true" />
-            <element signature="e#5745#5746#0" expanded="true" />
-            <element signature="e#9753#9754#0" expanded="true" />
-            <element signature="e#9797#9798#0" expanded="true" />
-            <element signature="e#10230#10231#0" expanded="true" />
-            <element signature="e#10264#10265#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/EventLoopGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/util/ReferenceCounted.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/buffer/ByteBuf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="248" column="46" selection-start-line="248" selection-start-column="46" selection-end-line="248" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/RecvByteBufAllocator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/nio/AbstractNioByteChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="140" column="36" selection-start-line="140" selection-start-column="36" selection-end-line="140" selection-end-column="36" />
-          <folding>
-            <element signature="e#2319#2320#0" expanded="true" />
-            <element signature="e#2374#2375#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/handler/codec/DelimiterBasedFrameDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="57" column="56" lean-forward="true" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
-          <folding>
-            <element signature="e#2806#2807#0" expanded="true" />
-            <element signature="e#2859#2860#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/ChannelInboundHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="42" column="69" lean-forward="true" selection-start-line="42" selection-start-column="69" selection-end-line="42" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/handler/codec/ByteToMessageDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="259" column="28" lean-forward="true" selection-start-line="259" selection-start-column="28" selection-end-line="259" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/nio/AbstractNioChannel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="210" column="29" selection-start-line="210" selection-start-column="29" selection-end-line="210" selection-end-column="29" />
-          <folding>
-            <element signature="e#3891#3892#0" expanded="true" />
-            <element signature="e#3925#3926#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/bootstrap/AbstractBootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="287" selection-start-line="287" selection-end-line="287" />
-          <folding>
-            <element signature="e#8706#8707#0" expanded="true" />
-            <element signature="e#8766#8767#0" expanded="true" />
-            <element signature="e#14210#14211#0" expanded="true" />
-            <element signature="e#14238#14239#0" expanded="true" />
-            <element signature="e#14828#14829#0" expanded="true" />
-            <element signature="e#14858#14859#0" expanded="true" />
-            <element signature="e#14909#14910#0" expanded="true" />
-            <element signature="e#14937#14938#0" expanded="true" />
-            <element signature="e#15184#15185#0" expanded="true" />
-            <element signature="e#15214#15215#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="297">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/netty/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="594">
+          <caret line="31" column="38" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/socket/nio/NioServerSocketChannel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netty/ClientHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="145" selection-start-line="145" selection-end-line="145" />
-          <folding>
-            <element signature="e#0#6471#0" expanded="true" />
-            <element signature="e#2902#2903#0" expanded="true" />
-            <element signature="e#2960#2961#0" expanded="true" />
-            <element signature="e#3798#3799#0" expanded="true" />
-            <element signature="e#3853#3854#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="264">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/nio/AbstractNioMessageChannel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/HttpClientUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
+        <state relative-caret-position="363">
+          <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/handler/logging/LoggingHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="240" selection-start-line="240" selection-end-line="240" />
-          <folding>
-            <element signature="e#2025#2026#0" expanded="true" />
-            <element signature="e#2060#2061#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/DefaultChannelHandlerContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#1260#1261#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/AbstractChannelHandlerContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="361" selection-start-line="361" selection-end-line="361" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netty/ServerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/bootstrap/ServerBootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="245" column="32" selection-start-line="245" selection-start-column="32" selection-end-line="245" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/ChannelHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="184" selection-start-line="184" selection-end-line="184" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/ChannelInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="68" column="28" selection-start-line="68" selection-start-column="28" selection-end-line="68" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/ChannelPipeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="370" column="20" selection-start-line="370" selection-start-column="20" selection-end-line="370" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/DefaultChannelPipeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="204" column="33" selection-start-line="204" selection-start-column="33" selection-end-line="204" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#48994#0" expanded="true" />
-            <element signature="e#6082#6083#0" expanded="true" />
-            <element signature="e#6112#6113#0" expanded="true" />
-            <element signature="e#14227#14228#0" expanded="true" />
-            <element signature="e#14273#14274#0" expanded="true" />
-            <element signature="e#35169#35170#0" expanded="true" />
-            <element signature="e#35226#35227#0" expanded="true" />
-            <element signature="e#42949#42950#0" expanded="true" />
-            <element signature="e#42984#42985#0" expanded="true" />
-            <element signature="e#44347#44348#0" expanded="true" />
-            <element signature="e#44389#44390#0" expanded="true" />
-            <element signature="e#46794#46795#0" expanded="true" />
-            <element signature="e#46832#46833#0" expanded="true" />
-            <element signature="e#47024#47025#0" expanded="true" />
-            <element signature="e#47058#47059#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/SingleThreadEventLoop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="57" column="12" lean-forward="true" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
-          <folding>
-            <element signature="e#3045#3046#0" expanded="true" />
-            <element signature="e#3118#3119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/util/concurrent/SingleThreadEventExecutor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="160" column="11" selection-start-line="160" selection-start-column="11" selection-end-line="160" selection-end-column="11" />
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/Cast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/utils/XmlUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/TestInpatient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/IsUniqueChars.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/bean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3993">
+          <caret line="135" column="50" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="50" />
           <folding>
-            <element signature="e#17844#17845#0" expanded="true" />
-            <element signature="e#17888#17889#0" expanded="true" />
-            <element signature="e#21721#21722#0" expanded="true" />
-            <element signature="e#21761#21762#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/util/concurrent/AbstractScheduledEventExecutor.java">
+    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/com/yuantu/frontgateway-client/1.0.0-SNAPSHOT/frontgateway-client-1.0.0-20170805.071302-77.jar!/com/yuantu/client/constant/HttpServiceName.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="46" column="12" lean-forward="true" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+        <state relative-caret-position="693">
+          <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../java/32Bit/jre/lib/rt.jar!/java/nio/channels/SelectionKey.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/TestFrontGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1016" column="18" selection-start-line="1016" selection-start-column="18" selection-end-line="1016" selection-end-column="18" />
           <folding>
-            <element signature="e#1693#1694#0" expanded="true" />
-            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/util/concurrent/AbstractEventExecutor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaNIO/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
-          <folding>
-            <element signature="e#1752#1753#0" expanded="true" />
-            <element signature="e#1788#1789#0" expanded="true" />
-            <element signature="e#1999#2000#0" expanded="true" />
-            <element signature="e#2057#2058#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="198">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netty/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaNIO/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-          <folding>
-            <element signature="e#1324#1912#0" expanded="true" />
-            <element signature="e#1911#1912#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="66">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/MultithreadEventLoopGroup.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaNIO/TestService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
-          <folding>
-            <element signature="e#3118#3119#0" expanded="true" />
-            <element signature="e#3165#3166#0" expanded="true" />
-            <element signature="e#3343#3344#0" expanded="true" />
-            <element signature="e#3390#3391#0" expanded="true" />
-            <element signature="e#3465#3466#0" expanded="true" />
-            <element signature="e#3512#3513#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="297">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/util/concurrent/MultithreadEventExecutorGroup.java">
+    <entry file="jar://$PROJECT_DIR$/../../java/32Bit/jre/lib/rt.jar!/java/util/concurrent/Executor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="157" column="37" selection-start-line="157" selection-start-column="37" selection-end-line="157" selection-end-column="37" />
-          <folding>
-            <element signature="e#5733#5734#0" expanded="true" />
-            <element signature="e#5770#5771#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/nio/NioEventLoopGroup.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/javaNIO/JavaNIO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="125" column="24" selection-start-line="125" selection-start-column="24" selection-end-line="125" selection-end-column="24" />
-          <folding>
-            <element signature="e#1713#1714#0" expanded="true" />
-            <element signature="e#1736#1737#0" expanded="true" />
-            <element signature="e#1986#1987#0" expanded="true" />
-            <element signature="e#2033#2034#0" expanded="true" />
-            <element signature="e#2461#2462#0" expanded="true" />
-            <element signature="e#2530#2531#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../maven_repo2/io/netty/netty-all/4.1.19.Final/netty-all-4.1.19.Final-sources.jar!/io/netty/channel/nio/NioEventLoop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="172" column="47" selection-start-line="172" selection-start-column="47" selection-end-line="172" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../java/jdk/src.zip!/java/nio/channels/spi/SelectorProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="229" column="37" selection-start-line="229" selection-start-column="37" selection-end-line="229" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../java/jdk/jre/lib/rt.jar!/sun/nio/ch/SelectorProviderImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../java/jdk/jre/lib/rt.jar!/sun/nio/ch/WindowsSelectorProvider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        <state relative-caret-position="675">
+          <caret line="78" column="36" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1588,7 +1423,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>1.8 (1)</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1605,6 +1440,7 @@
             <option name="proportions">
               <list>
                 <option value="0.3137931" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

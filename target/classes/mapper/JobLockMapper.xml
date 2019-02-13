@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.JobLockMapper">
+  <resultMap id="BaseResultMap" type="com.bean.JobLock">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="resource" jdbcType="VARCHAR" property="resource" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modify" jdbcType="TIMESTAMP" property="gmtModify" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.DoctorDiagRoomMapper">
+  <resultMap id="BaseResultMap" type="com.bean.DoctorDiagRoom">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="corp_id" jdbcType="BIGINT" property="corpId" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+    <result column="area_name" jdbcType="VARCHAR" property="areaName" />
+    <result column="small_dept_code" jdbcType="VARCHAR" property="smallDeptCode" />
+    <result column="doctor_no" jdbcType="VARCHAR" property="doctorNo" />
+    <result column="doctor_code" jdbcType="VARCHAR" property="doctorCode" />
+    <result column="doctor_name" jdbcType="VARCHAR" property="doctorName" />
+    <result column="diag_room" jdbcType="VARCHAR" property="diagRoom" />
+    <result column="sch_date" jdbcType="DATE" property="schDate" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modify" jdbcType="TIMESTAMP" property="gmtModify" />
+    <result column="am_pm" jdbcType="INTEGER" property="amPm" />
+    <result column="diag_room_code" jdbcType="VARCHAR" property="diagRoomCode" />
+    <result column="queue_name" jdbcType="VARCHAR" property="queueName" />
+    <result column="queue_code" jdbcType="VARCHAR" property="queueCode" />
+    <result column="week" jdbcType="TINYINT" property="week" />
+  </resultMap>
+</mapper>

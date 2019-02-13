@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.QueueMapper">
+  <resultMap id="BaseResultMap" type="com.bean.Queue">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="queue_code" jdbcType="VARCHAR" property="queueCode" />
+    <result column="queue_name" jdbcType="VARCHAR" property="queueName" />
+    <result column="queue_date" jdbcType="DATE" property="queueDate" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+    <result column="closed" jdbcType="BIT" property="closed" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="queue_type" jdbcType="TINYINT" property="queueType" />
+    <result column="big_dept_name" jdbcType="VARCHAR" property="bigDeptName" />
+    <result column="big_dept_code" jdbcType="VARCHAR" property="bigDeptCode" />
+    <result column="pre_count" jdbcType="INTEGER" property="preCount" />
+    <result column="doctor_sel" jdbcType="BIT" property="doctorSel" />
+    <result column="back_type" jdbcType="INTEGER" property="backType" />
+    <result column="corp_id" jdbcType="VARCHAR" property="corpId" />
+    <result column="dept_address" jdbcType="VARCHAR" property="deptAddress" />
+    <result column="small_dept_name" jdbcType="VARCHAR" property="smallDeptName" />
+    <result column="small_dept_code" jdbcType="VARCHAR" property="smallDeptCode" />
+    <result column="service_mode" jdbcType="TINYINT" property="serviceMode" />
+    <result column="queue_limit_num" jdbcType="TINYINT" property="queueLimitNum" />
+    <result column="doctor_limit_num" jdbcType="TINYINT" property="doctorLimitNum" />
+    <result column="del_flag" jdbcType="TINYINT" property="delFlag" />
+    <result column="queue_tag" jdbcType="VARCHAR" property="queueTag" />
+    <result column="queue_alias" jdbcType="VARCHAR" property="queueAlias" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+  </resultMap>
+</mapper>
