@@ -28,9 +28,7 @@ import java.io.SerializablePermission;
 import java.sql.SQLOutput;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 
 //测试的cardNo : 0101103  cardType：2 deptCode:021607 patientId 7 hospitalCode:1000011272
@@ -210,11 +208,12 @@ public class TestFrontGateway {
     public void testQueryPatient() throws IOException {
         Map<String, String> sParaTemp = new HashMap();
         sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
-        sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "210");
-        sParaTemp.put(ParamsKeyConstant.OPER_ID,"ZZJ028");
-        sParaTemp.put(ParamsKeyConstant.CARD_TYPE,"2");
-        sParaTemp.put(ParamsKeyConstant.NAME,"童国联");
-        sParaTemp.put(ParamsKeyConstant.CARD_NO,"330127199402061619");
+        sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "182");
+        sParaTemp.put(ParamsKeyConstant.OPER_ID,"ZZJ001");
+        sParaTemp.put(ParamsKeyConstant.CARD_TYPE,"1");
+        sParaTemp.put("code","ZF");
+        sParaTemp.put(ParamsKeyConstant.NAME,"小是测试");
+        sParaTemp.put(ParamsKeyConstant.CARD_NO,"330224196702265835");
         sParaTemp.put(ParamsKeyConstant.DEVICE_IP,"132.147.183.42");//  20150100065066
         sParaTemp.put(ParamsKeyConstant.SERVICE, HttpServiceName.QueryPatientInfo);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
@@ -614,6 +613,25 @@ public class TestFrontGateway {
         System.out.print(result);
     }
 
+//绑卡
+    @Test
+    public void testBind() throws IOException {
+        Map<String, String> sParaTemp = new HashMap();
+        sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
+        sParaTemp.put(ParamsKeyConstant.SOURCE_CODE,"APP");
+        sParaTemp.put(ParamsKeyConstant.CARD_NO,"20180100000230");
+        sParaTemp.put(ParamsKeyConstant.PATIENT_NAME,"郑浩然");
+        sParaTemp.put(ParamsKeyConstant.ID_NO,"2323031992****4410");
+        sParaTemp.put(ParamsKeyConstant.UNION_ID,"2");
+        sParaTemp.put(ParamsKeyConstant.PHONE,"185****5444");
+        sParaTemp.put(ParamsKeyConstant.SETUP_TYPE,"2");
+        sParaTemp.put("unionName","北京医联体");
+        sParaTemp.put(ParamsKeyConstant.SERVICE,HttpServiceName.BingingPatientCard);
+        Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
+        String result = HttpClientUtils.post(prodUrl,sPara);
+        JSONObject array= JSON.parseObject(result);
+        System.out.print(result);
+    }
     @Test
     public void testWardItem() throws IOException {
         Map<String, String> sParaTemp = new HashMap();
@@ -739,17 +757,18 @@ public class TestFrontGateway {
         Map<String, String> sParaTemp = new HashMap();
         sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
         sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
-        sParaTemp.put(ParamsKeyConstant.HOSP_CODE, String.valueOf("1000011272"));
-        sParaTemp.put(ParamsKeyConstant.DEPT_CODE,"021101");
-        sParaTemp.put(ParamsKeyConstant.DOCT_CODE,"1127");
-        sParaTemp.put(ParamsKeyConstant.SERVICE,HttpServiceName.QUERYHOSPITALALLDOC);
+        sParaTemp.put(ParamsKeyConstant.HOSP_CODE, String.valueOf("1000011274"));
+        sParaTemp.put(ParamsKeyConstant.DEPT_CODE,"020101");
+        sParaTemp.put(ParamsKeyConstant.DOCT_CODE,"1020");
+        sParaTemp.put(ParamsKeyConstant.SERVICE,HttpServiceName.QueryHospitalDoc);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
-        String result = HttpClientUtils.post(localUrl,sPara);
+        System.out.println(JSON.toJSONString(sPara));
+        String result = HttpClientUtils.post(url,sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
 
-//根据卡面号获取用户信息；
+//根据卡面号获取用户信
     @Test
     public void setGetUserAccountBycard() throws IOException {
         Map<String, String> sParaTemp = new HashMap();
@@ -808,12 +827,12 @@ public class TestFrontGateway {
 
   
 
-    //退费；
+    //退费；3702016666虚拟医院的code
     @Test
     public void foundBack() throws IOException {
         Map<String, String> sParaTemp = new HashMap();
-        sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "HIS");
-        sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID,"2001");
+        sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
+        sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID,"9999");
         sParaTemp.put(ParamsKeyConstant.DEVICE_INFO,"ZZJ001");
         sParaTemp.put(ParamsKeyConstant.TERMINAL_NO,"ZZJ001");
 
@@ -821,19 +840,20 @@ public class TestFrontGateway {
         sParaTemp.put(ParamsKeyConstant.DEVICE_MAC,"00-FF-CE-BD-49-1D");
         sParaTemp.put(ParamsKeyConstant.DEVICE_IP,"192.168.2.11");
         sParaTemp.put(ParamsKeyConstant.TRADE_TIME,"2018-03-18 10:10:00");
-        sParaTemp.put(ParamsKeyConstant.HOSP_CODE, String.valueOf("1000011274"));
+        sParaTemp.put(ParamsKeyConstant.HOSP_CODE, String.valueOf("3702016666"));
         sParaTemp.put(ParamsKeyConstant.FLOW_ID,"1111111111111116");
 
 
-        sParaTemp.put(ParamsKeyConstant.OUT_TRADE_NO,"01020010120190118114749938948964");
+        sParaTemp.put(ParamsKeyConstant.OUT_TRADE_NO,"01099990120190320133218233191258");
         sParaTemp.put("outRefundNo","T00000000000000111176");
-        sParaTemp.put("fee","50");
-        sParaTemp.put("reason","50元");
+        sParaTemp.put("fee","100");
+        sParaTemp.put("reason","100分");
+
 
         sParaTemp.put(ParamsKeyConstant.SERVICE,HttpServiceName.BackFeeUserCash);
         Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
         System.out.println(JSON.toJSONString(sPara));
-        String result = HttpClientUtils.post(url,sPara);
+        String result = HttpClientUtils.post("http://121.40.253.119:8190/frontgateway/gateway.do",sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
@@ -854,32 +874,14 @@ public class TestFrontGateway {
 
     @Test
     public void test() throws IOException {
-        String s = "{\n" +
-                "    \"operId\": \"YT-550\",\n" +
-                "    \"sourceCode\": \"ZZJ\",\n" +
-                "    \"tradeTime\": \"2017-04-21 10:37:14\",\n" +
-                "    \"sign_type\": \"RSA\",\n" +
-                "    \"terminalNo\": \"YT-550\",\n" +
-                "    \"hospitalId\": \"150\",\n" +
-                "    \"deviceMac\": \"00-50-C2-29-26-C6\",\n" +
-                "    \"deviceInfo\": \"ZZJ001\",\n" +
-                "    \"sign\": \"YeZUOosZwTceuM6xcEiYeaQP/Hx3zxHdXBTS5hnT4lUW6R/on5SQ7N/ROgH9Y2vFkWcfHsGQQJ2aUN164KtF9dndVv6++LDFbrTRoQOiNajFiIIF5NhtGYb75bikL15iS2p02K5nwyOMwgOfQWk6aiMM3a3dOTgg1sE5rqWdoWU=\",\n" +
-                "    \"deviceIp\": \"172.18.4.221\",\n" +
-                "    \"deviceNo\": \"YT-550\",\n" +
-                "    \"deviceType\": \"YT-550\",\n" +
-                "    \"service\": \"yuantu.wap.monitor.service\",\n" +
-                "    \"hospCode\": \"3702011121\",\n" +
-                "    \"deviceVersion\": \"YT-550\",\n" +
-                "    \"method\": \"heart\",\n" +
-                "    \"flowId\": \"ZZJ0012017042150726001870\"\n" +
-                "}";
 
-        Map map= JSON.parseObject(s,Map.class);
+
+        Map map= new HashMap();
+        map.put("code","1001");
 //        Document document = DocumentHelper.parseText(s);
 //        Map map = XmlUtils.dom2Map(document.getRootElement());
 ////        JSONObject jsonObject = (JSONObject) JSON.toJSON(map);
-        Map<String, String> sPara = ParamsUtil.buildRequestPara(map);
-        String result = HttpClientUtils.post("http://localhost:8084/InpatientServer/device/heart",map);
+        String result = HttpClientUtils.post("http://localhost:8080/data/datacenter/dispatcher",map);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
@@ -1053,6 +1055,20 @@ public class TestFrontGateway {
     }
 
     @Test
+    public void testQueryDoc() throws IOException {
+        Map<String, String> sParaTemp = new HashMap();
+        sParaTemp.put(ParamsKeyConstant.DOCT_CODE, "1127");
+        sParaTemp.put(ParamsKeyConstant.HOSPITAL_ID, "2001");
+        sParaTemp.put(ParamsKeyConstant.DEPT_CODE,"021101");
+        sParaTemp.put(ParamsKeyConstant.DEVICE_INFO,"1111");
+        sParaTemp.put(ParamsKeyConstant.SERVICE,"yuantu.wap.query.hospital.doc");
+        Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
+        String result = HttpClientUtils.post(localUrl,sPara);
+        JSONObject array= JSON.parseObject(result);
+        System.out.print(result);
+    }
+
+    @Test
     public void testMedicine() throws IOException {
         Map<String, String> sParaTemp = new HashMap();
         sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
@@ -1093,5 +1109,37 @@ public class TestFrontGateway {
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
+
+    @Test
+    public void testMyObj(){
+        Map map =new HashMap();
+        map.put("pid","1");
+        map.put("uid","1");
+        map.put("name","1");
+        map.put("type","1");
+        List list = new ArrayList();
+        list.add(map);
+        list.add(map);
+        System.out.println(JSON.toJSONString(list));
+    }
+
+    //住院预交金充值
+    @Test
+    public void testChargeInhos() throws IOException {
+        Map<String, String> sParaTemp = new HashMap();
+        sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
+        sParaTemp.put(ParamsKeyConstant.PATIENT_ID,"0000244943");
+        sParaTemp.put("sFlowId","00000000001");
+//        sParaTemp.put(ParamsKeyConstant.CARD_TYPE,"2");
+        sParaTemp.put(ParamsKeyConstant.TRADE_MODE,"WX");
+        sParaTemp.put(ParamsKeyConstant.CASH,"100");
+        sParaTemp.put(ParamsKeyConstant.In_Hos,"1");
+        sParaTemp.put(ParamsKeyConstant.OPER_ID,"mo");
+        sParaTemp.put(ParamsKeyConstant.FLOW_ID,"1000000001");
+        String result = HttpClientUtils.post("http://10.10.11.101:8083/InpatientServer/patient/chargeInhosAccount",sParaTemp);
+        JSONObject array= JSON.parseObject(result);
+        System.out.print(result);
+    }
+
 
 }

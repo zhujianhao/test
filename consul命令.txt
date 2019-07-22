@@ -1,0 +1,23 @@
+docker pull consul 
+
+配置固定docker固定ip docker network create --driver=bridge --subnet=192.168.0.1/25 consul-net
+
+第一台  ：docker run  --net=consul-net --name consulservice1 --ip 192.168.0.2  -d consul consul agent -server -bind=192.168.0.2 -bootstrap-expect=4 -data-dir /consul/data -config-dir /consul/config  
+
+第二台  ：docker run  --net=consul-net --name consulservice2 --ip 192.168.0.3  -d consul consul agent -server -bind=192.168.0.3 -bootstrap-expect=4 -data-dir /consul/data -config-dir /consul/config -join 192.168.0.2
+
+第三台  ：docker run  --net=consul-net --name consulservice3 --ip 192.168.0.4  -d consul consul agent -server -bind=192.168.0.4 -bootstrap-expect=4 -data-dir /consul/data -config-dir /consul/config -join 192.168.0.2
+
+
+第四台客户机  ：docker run  --net=consul-net --name consulclient --ip 192.168.0.5 -p 8500:8500 -d consul consul agent  -bind=192.168.0.5  -data-dir /consul/data -config-dir /consul/config -client=0.0.0.0 -ui -join 192.168.0.2
+
+
+
+
+
+
+
+
+
+
+

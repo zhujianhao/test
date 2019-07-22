@@ -1,5 +1,7 @@
 package com;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.yuantu.common.lang.StringUtils;
 import org.junit.Test;
 
@@ -8,6 +10,7 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class test1 {
 
@@ -140,4 +143,12 @@ public class test1 {
         return res;
     }
 
+
+
+    @Test
+    public void testReg(){
+        JSONArray jsonArray = JSON.parseArray("[]");
+        //业务代码是3开头的不用登陆校验
+        System.out.println(jsonArray);
+    }
 }
