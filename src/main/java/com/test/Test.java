@@ -5,8 +5,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
+import java.util.concurrent.LinkedBlockingQueue;
 import java.util.stream.Collectors;
 
+import com.node.Node;
 import jxl.Cell;
 import jxl.Range;
 import jxl.Sheet;
@@ -19,22 +21,12 @@ public class Test {
 
 
     public static void main(String[] args){
-        Map<String,String> map = new HashMap();
-        map.put("key1","value1");
-        map.put("key2","value2");
-        StringBuilder s = new StringBuilder();
+        List<String> linkLisk = new LinkedList<>();
 
-        for(String key :map.keySet()){
-            if(s.length()>0) {
-                s.append(";");
-            }
-            s.append(key);
-            s.append(":");
-            s.append(map.get(key));
-        }
-        System.out.println(s.toString());
-
-
+        linkLisk.add("afdfdggddgfdfefv");
+        linkLisk.add("bsdsdfsffsd");
+        Collections.sort(linkLisk);
+        System.out.println(linkLisk.toString());
     }
 
 
@@ -78,6 +70,61 @@ public class Test {
         public void setHosCode(String hosCode) {
             this.hosCode = hosCode;
         }
+    }
+
+
+    @org.junit.Test
+    public void readTree(){
+        Node rootnode = new Node(
+                new Node(new Node(null,null,"4"),new Node(null,null,"5"),"2"),
+                new Node(new Node(new Node(null,null,"8"),new Node(null,null,"9"),"6"),new Node(new Node(null,null,"10"),new Node(null,null,"11"),"7"),"3"),
+                "1");
+        stack1.push(rootnode.getLc());
+        stack1.push(rootnode.getRc());
+        System.out.println(rootnode.getDate());
+        readStack1();
+
+
+    }
+    private static Stack<Node> stack1= new Stack();
+
+    private static Stack<Node> stack2 = new Stack();
+    private static void readStack1(){
+        while(true) {
+            if (stack1.isEmpty()){
+                return;
+            }
+            Node node = stack1.pop();
+            if(node!=null) {
+
+                stack2.push(node.getRc());
+                stack2.push(node.getLc());
+                System.out.println(node.getDate());
+            }
+            if (stack1.isEmpty()){
+                break;
+            }
+        }
+        readStack2();
+    }
+
+    private static void readStack2(){
+        while(true) {
+            if (stack2.isEmpty()){
+                return;
+            }
+            Node node = stack2.pop();
+            if(node!=null) {
+                stack1.add(node.getLc());
+                stack1.add(node.getRc());
+
+                System.out.println(node.getDate());
+            }
+            if (stack2.isEmpty()){
+                break;
+            }
+        }
+        readStack1();
     }
 
 

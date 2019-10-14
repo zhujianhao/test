@@ -192,6 +192,9 @@ public class HttpClientUtils {
         });
 
         CloseableHttpClient httpclient = getConnection();
+        if(url.indexOf("https")!=-1){
+            httpclient = createSSLClientDefault();
+        }
         CloseableHttpResponse response=null;
 
         HttpPost httppost = new HttpPost(url);

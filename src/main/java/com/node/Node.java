@@ -7,8 +7,10 @@ public  class   Node<T> {
     private Node rc;
     private T date;
 
-    public void Node(Node l,Node r,T date){
-
+    public  Node(Node l,Node r,T date){
+        this.lc=l;
+        this.rc=r;
+        this.date=date;
     }
 
     public Node getP() {

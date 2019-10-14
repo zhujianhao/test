@@ -28,7 +28,7 @@ public class test1 {
 
     @Test
     public void toPutong(){
-        String s = "1111110050.50006";
+        String s = "11111111111110050.51006";
         s =formate(s);
         String[] s1= toUp(s);
         String preChar = "";

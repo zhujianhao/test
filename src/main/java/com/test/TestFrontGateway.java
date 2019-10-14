@@ -1136,10 +1136,54 @@ public class TestFrontGateway {
         sParaTemp.put(ParamsKeyConstant.In_Hos,"1");
         sParaTemp.put(ParamsKeyConstant.OPER_ID,"mo");
         sParaTemp.put(ParamsKeyConstant.FLOW_ID,"1000000001");
-        String result = HttpClientUtils.post("http://10.10.11.101:8083/InpatientServer/patient/chargeInhosAccount",sParaTemp);
+        Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
+        String result = HttpClientUtils.post("http://10.10.11.101:8083/InpatientServer/patient/chargeInhosAccount",sPara);
         JSONObject array= JSON.parseObject(result);
         System.out.print(result);
     }
 
 
+
+    @Test
+    public void testSup() throws IOException {
+        Map<String, String> sParaTemp = new HashMap();
+        sParaTemp.put(ParamsKeyConstant.SOURCE_CODE, "ZZJ");
+        sParaTemp.put(ParamsKeyConstant.PATIENT_ID,"0000244943");
+        sParaTemp.put("sFlowId","00000000001");
+//        sParaTemp.put(ParamsKeyConstant.CARD_TYPE,"2");
+        sParaTemp.put(ParamsKeyConstant.TRADE_MODE,"WX");
+        sParaTemp.put(ParamsKeyConstant.CASH,"100");
+        sParaTemp.put(ParamsKeyConstant.In_Hos,"1");
+        sParaTemp.put(ParamsKeyConstant.OPER_ID,"mo");
+        sParaTemp.put(ParamsKeyConstant.FLOW_ID,"1000000001");
+        Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
+        String result = HttpClientUtils.post("http://localhost:8081/dispatcher/appRest",sParaTemp);
+        JSONObject array= JSON.parseObject(result);
+        System.out.print(result);
+    }
+
+    @Test
+    public void testCalenda(){
+            String[] names = {"a","b"};
+            HashSet set1 = new HashSet(Arrays.asList(names));
+            HashSet set2 = new HashSet(Arrays.asList(names));
+            Boolean res1 = set1.equals(set2);
+            set2.add("c");
+            Boolean res2 = set1.equals(set2);
+        System.out.println(res1);
+        System.out.println(res2);
+    }
+
+    @Test
+    public void testConsultation() throws IOException {
+
+        Map<String, String> sParaTemp = new HashMap();
+        sParaTemp.put("service", "recommendCheckBody");
+        sParaTemp.put("recordId","639");
+        sParaTemp.put("step","1");
+        Map<String, String> sPara = ParamsUtil.buildRequestPara(sParaTemp);
+        String result = HttpClientUtils.post("https://dc.yuantutech.com/consultation/dispatcher/appRest",sPara);
+        JSONObject array= JSON.parseObject(result);
+        System.out.print(result);
+    }
 }
