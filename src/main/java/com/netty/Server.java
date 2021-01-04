@@ -25,18 +25,18 @@ public class Server {
     }
 
     public void run() {
-        EventLoopGroup bossGroup = new NioEventLoopGroup(); //用于处理服务器端接收客户端连接
-        EventLoopGroup workerGroup = new NioEventLoopGroup(); //进行网络通信（读写）
+        EventLoopGroup reactor = new NioEventLoopGroup(); //用于处理服务器端接收客户端连接
+        EventLoopGroup handlerGroup = new NioEventLoopGroup(); //进行网络通信（读写）
         try {
             ServerBootstrap bootstrap = new ServerBootstrap(); //辅助工具类，用于服务器通道的一系列配置
-            bootstrap.group(bossGroup, workerGroup) //绑定两个线程组
+            bootstrap.group(reactor, handlerGroup) //绑定两个线程组
                     .channel(NioServerSocketChannel.class) //指定NIO的模式
                     .handler(new LoggingHandler())//添加bossGroup的hangdler
                     .childHandler(//添加workerGroup的handler
                             new ChannelInitializer<SocketChannel>() { //配置具体的数据处理方式
                         @Override
                         protected void initChannel(SocketChannel socketChannel) throws Exception {
-                            ByteBuf buf = Unpooled.copiedBuffer("$_".getBytes());
+                            ByteBuf buf = Unpooled.copiedBuffer("$_".getBytes());//防止粘包
                             socketChannel.pipeline().addLast(new DelimiterBasedFrameDecoder(1024,buf));
                             socketChannel.pipeline().addLast(new StringDecoder());
                             socketChannel.pipeline().addLast(new ServerHandler());
@@ -63,8 +63,8 @@ public class Server {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            workerGroup.shutdownGracefully();
-            bossGroup.shutdownGracefully();
+            reactor.shutdownGracefully();
+            handlerGroup.shutdownGracefully();
         }
     }
 
