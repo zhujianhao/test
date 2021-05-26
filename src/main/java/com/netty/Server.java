@@ -30,7 +30,7 @@ public class Server {
         try {
             ServerBootstrap bootstrap = new ServerBootstrap(); //辅助工具类，用于服务器通道的一系列配置
             bootstrap.group(reactor, handlerGroup) //绑定两个线程组
-                    .channel(NioServerSocketChannel.class) //指定NIO的模式
+                    .channel(NioServerSocketChannel.class) //指定NIO的模式 会设置channelFactory
                     .handler(new LoggingHandler())//添加bossGroup的hangdler
                     .childHandler(//添加workerGroup的handler
                             new ChannelInitializer<SocketChannel>() { //配置具体的数据处理方式

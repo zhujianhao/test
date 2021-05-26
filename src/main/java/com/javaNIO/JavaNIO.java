@@ -54,7 +54,8 @@ public class JavaNIO {
             System.out.println("服务端初始化失败"+e.toString());
         }
         while(true) {
-            int event = selector.select();
+            int event = selector.select();//event 返回准备好的个数
+            System.out.println("事件："+event);
             Set<SelectionKey> keys = selector.selectedKeys();
             Iterator<SelectionKey> it = keys.iterator();
             while (it.hasNext()) {
